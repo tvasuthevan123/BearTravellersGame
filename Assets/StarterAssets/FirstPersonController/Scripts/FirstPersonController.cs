@@ -112,7 +112,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
-			if(StoryManager.instance.isDialoguePlaying){
+			if(StoryManager.instance != null && StoryManager.instance.isDialoguePlaying){
 				Cursor.lockState = CursorLockMode.None;
 				Cursor.visible = true;
 				return;
@@ -127,7 +127,7 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			if(StoryManager.instance.isDialoguePlaying){
+			if(StoryManager.instance != null &&  StoryManager.instance.isDialoguePlaying){
 				return;
 			}
 			CameraRotation();
