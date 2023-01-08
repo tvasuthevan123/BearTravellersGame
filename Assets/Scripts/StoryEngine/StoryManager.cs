@@ -22,6 +22,10 @@ public class StoryManager : MonoBehaviour
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
 
+    [Header("Note UI")]
+    [SerializeField] private GameObject notePanel;
+    [SerializeField] private TextMeshProUGUI noteText;
+
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStorySegment;
@@ -31,6 +35,7 @@ public class StoryManager : MonoBehaviour
     private StoryVariables storyVariables;
 
     public bool isDialoguePlaying { get; private set; }
+    public bool isNoteOpen { get; private set; }
     public static StoryManager instance { get; private set; }
 
     void Awake()
@@ -49,7 +54,10 @@ public class StoryManager : MonoBehaviour
 
 
         isDialoguePlaying = false;
+        isNoteOpen = false;
+        notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
         storyPanel.SetActive(false);
+
 
         choicesText = new TextMeshProUGUI[choices.Length];
 
@@ -61,10 +69,10 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
-        if (!isDialoguePlaying && !isAuto)
+        if (!isDialoguePlaying && !isAuto && !isNoteOpen)
             return;
 
-        if (currentStorySegment.currentChoices.Count == 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))
+        if (currentStorySegment!=null && currentStorySegment.currentChoices.Count == 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             ContinueStorySegment(isAuto);
         }
@@ -200,6 +208,18 @@ public class StoryManager : MonoBehaviour
         if (variableValue == null)
             Debug.LogWarning("Variable " + name + " doesn't exist");
         return variableValue;
+    }
+
+    public void EnterNote(string noteText){
+        isNoteOpen = true;
+        notePanel.GetComponent<Animator>().SetBool("isNoteOpen", true);
+        this.noteText.text = noteText; 
+    }
+
+    public void ExitNote(){
+        Debug.Log("Note closed");
+        isNoteOpen = false;
+        notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
     }
 
 }
