@@ -8,7 +8,6 @@ public class AppearingText : MonoBehaviour
     [SerializeField] private Transform playerCam;
     private TextMeshPro textElement;
     private bool playerInRange;
-    private bool setTransform = false;
 
     void Awake()
     {

@@ -6,7 +6,6 @@ using UnityEngine;
 public class Weapon : Item
 {
     public GameObject prefab;
-    public int magSize;
-    public int magCount;
+    public int ammoCount;
     public float range;
 }

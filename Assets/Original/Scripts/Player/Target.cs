@@ -14,6 +14,10 @@ public class Target : MonoBehaviour
     }
 
     void Die(){
+        if(gameObject.GetComponent<ZombieCharacterControl>() != null){
+            gameObject.GetComponent<ZombieCharacterControl>().Die();
+            return;
+        }
         Destroy(gameObject);
     }
 }

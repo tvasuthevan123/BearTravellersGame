@@ -7,8 +7,6 @@ public class Inventory : MonoBehaviour
     public Weapon gun;
     public Consumable medkit;
 
-    public Consumable medkitTest;
-
     void Start()
     {
         medkit = ScriptableObject.CreateInstance<Consumable>();
@@ -28,7 +26,7 @@ public class Inventory : MonoBehaviour
             if (consumable.type == ConsumableType.Medkit)
                 medkit.itemCount++;
             else if(consumable.type == ConsumableType.Ammo && gun != null)
-                gun.magCount += consumable.itemCount;
+                gun.ammoCount += consumable.itemCount;
 
         }
     }
