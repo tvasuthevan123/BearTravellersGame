@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float health;
+    public float health;
     private float lerpTimer;
     private float maxHealth = 100f;
     public float chipSpeed = 2f;
@@ -46,11 +46,20 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage){
         health -= damage;
         lerpTimer = 0f;
+
+        if (health <= 0)
+        {
+            //TODO: gameover
+        }
     }
 
-    public void heal(float health){
-        this.health += health;
+    public void heal(float healAmount){
+        health += healAmount;
         lerpTimer = 0f;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
 }
