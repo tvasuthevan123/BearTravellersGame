@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
 
+    public Ammo gunAmmo;
+
     void Update() {
         if(Input.GetButtonDown("Fire1")){
             Shoot();
@@ -18,6 +20,7 @@ public class Gun : MonoBehaviour
 
     void Shoot(){
         muzzleFlash.Play();
+        gunAmmo.ammoUsage();
         RaycastHit hit;
         if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range)){
             Debug.Log(hit.transform.name);
