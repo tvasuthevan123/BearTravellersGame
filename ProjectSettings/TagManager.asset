@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - gunammomedkit
+  - gun
+  - gunpickup
+  - medkit
   layers:
   - Default
   - TransparentFX
