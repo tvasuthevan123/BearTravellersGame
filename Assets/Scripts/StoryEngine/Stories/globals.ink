@@ -1,1 +1,0 @@
-VAR friendship_meter = 0
