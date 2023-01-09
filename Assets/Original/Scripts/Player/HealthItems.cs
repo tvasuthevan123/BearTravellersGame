@@ -25,7 +25,7 @@ public class HealthItems : MonoBehaviour
 
     public void medkitUsage()
     {
-        if (medkits > 0)
+        if (medkits > 0 && playerHealth.health != playerHealth.maxHealth)
         {
             medkits--;
             playerHealth.heal(50);
