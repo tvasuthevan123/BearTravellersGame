@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingSpeed: 0.01
+  globalStateJSON: {fileID: 4900000, guid: 90238fe546a604c4b889f926ad308cb9, type: 3}
   storyPanel: {fileID: 0}
   storyText: {fileID: 0}
   continueIcon: {fileID: 0}
@@ -53,3 +54,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  notePanel: {fileID: 0}
+  noteText: {fileID: 0}

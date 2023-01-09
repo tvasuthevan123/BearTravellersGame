@@ -62,7 +62,6 @@ public class MeterLighting : MonoBehaviour
     void Update()
     {
         int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
-        Debug.Log("Friendship Meter read " + friendshipMeter);
         if(friendshipMeter >= 0){
             setGradientBetweenKeys(neutralColors, bestColors, (float)friendshipMeter/25);
         }
