@@ -80,11 +80,12 @@ public class ZombieCharacterControl : MonoBehaviour
 
     IEnumerator PlayAttackSound(){
         AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
-        yield return new WaitForSeconds(audio.clip.length);
         audio.clip = attackSound;
         audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
+        audio.Play();
         audio.clip = defaultSound;
+        audio.loop = true;
     }
 
     void DisableMovement(){
@@ -96,8 +97,11 @@ public class ZombieCharacterControl : MonoBehaviour
     }
 
     public void Die(){
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Stop();
         m_controlMode = ControlMode.Stop;
         m_animator.SetTrigger("Dead");
+        
     }
 
     public void OnTriggerEnter(Collider collider){
