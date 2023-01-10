@@ -74,6 +74,8 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+		public bool disableInput = false;
+
 		private bool IsCurrentDeviceMouse
 		{
 			get
@@ -110,8 +112,15 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
+		// public void ToggleInput(){
+		// 	disableInput = !disableInput;
+		// }
+
 		private void Update()
 		{
+			if(disableInput)
+				return;
+
 			if(StoryManager.instance != null && StoryManager.instance.isDialoguePlaying){
 				Cursor.lockState = CursorLockMode.None;
 				Cursor.visible = true;
@@ -127,6 +136,9 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
+			if(disableInput)
+				return;
+				
 			if(StoryManager.instance != null &&  StoryManager.instance.isDialoguePlaying){
 				return;
 			}

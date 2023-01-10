@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 1362381479}
   - component: {fileID: 1362381480}
   - component: {fileID: 1362381481}
+  - component: {fileID: 1597935989}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -420,8 +421,13 @@ MonoBehaviour:
     m_Bits: 8
   camera: {fileID: 827219046665308247}
   healthitems: {fileID: 1362381481}
+  ammo: {fileID: 1362381479}
   gun: {fileID: 5704069026070664754}
   fence: {fileID: 0}
+  button1a: {fileID: 0}
+  button1b: {fileID: 0}
+  rock1a: {fileID: 0}
+  rock1b: {fileID: 0}
 --- !u!114 &1362381481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +443,18 @@ MonoBehaviour:
   medkits: 0
   playerHealth: {fileID: 312215413}
   medkitDisplay: {fileID: 0}
+--- !u!114 &1597935989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4430544692235151454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3510d05c99c749e4e9af6c9c00bc3e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &827219047050227366
 PrefabInstance:
   m_ObjectHideFlags: 0

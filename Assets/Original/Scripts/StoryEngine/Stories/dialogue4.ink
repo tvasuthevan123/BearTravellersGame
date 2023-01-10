@@ -3,7 +3,7 @@ INCLUDE globals.ink
 player: I just ran into more of those things… what are they #speaker:Player
 friend: I don't know, they look like zombies but who knows #speaker:Friend					
 more zombies spawn in		
-player: jesus, theres more of them coming			darkness eating zombies	#speaker:Player	
+player: jesus, theres more of them coming darkness eating zombies	#speaker:Player	
 player: woah, whats happening… #speaker:Player
 friend: what, whats happening? #speaker:Friend	
 player: the darkness… it's eating the zombie
