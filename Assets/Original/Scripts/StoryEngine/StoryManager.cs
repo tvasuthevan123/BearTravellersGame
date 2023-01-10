@@ -43,6 +43,8 @@ public class StoryManager : MonoBehaviour
     private const string CUTSCENE_TAG = "cutscene";
     private const string AUDIO_TAG = "audio";
 
+    private MusicManager musicManager;
+
     void Awake()
     {
         if (instance != null)
@@ -62,6 +64,9 @@ public class StoryManager : MonoBehaviour
         storyPanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
+
+        musicManager = MusicManager.Instance;
+        musicManager.PlaySpawnMusic();
 
         for (int i = 0; i < choices.Length; i++)
         {
