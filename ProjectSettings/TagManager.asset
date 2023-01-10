@@ -16,6 +16,7 @@ TagManager:
   - ammo
   - zombieeasy1
   - zombiehard1
+  - zombiefriend
   layers:
   - Default
   - TransparentFX
