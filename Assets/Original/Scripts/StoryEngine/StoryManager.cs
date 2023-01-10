@@ -47,6 +47,12 @@ public class StoryManager : MonoBehaviour
     private GameObject trigger;
     private MusicManager musicManager;
 
+    public GameObject zombieGroupHardOne;
+    public int zombieGroupHardOneCounter = 6;
+
+    public GameObject zombieGroupEasyOne;
+    public int zombieGroupEasyOneCounter = 6;
+
     void Awake()
     {
         if (instance != null)
@@ -291,5 +297,4 @@ public class StoryManager : MonoBehaviour
         isNoteOpen = false;
         notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
     }
-
 }

@@ -14,6 +14,8 @@ TagManager:
   - button1a
   - button1b
   - ammo
+  - zombieeasy1
+  - zombiehard1
   layers:
   - Default
   - TransparentFX

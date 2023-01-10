@@ -10,6 +10,13 @@ public class Target : MonoBehaviour
         health -= amount;
         if(health <= 0f){
             Die();
+            if (gameObject.CompareTag("zombiehard1")) {
+                StoryManager.instance.zombieGroupHardOneCounter--;
+                if (StoryManager.instance.zombieGroupHardOneCounter <= 0)
+                {
+                    Destroy(GameObject.FindWithTag("zombiehard1"));
+                }
+            }
         }
     }
 
