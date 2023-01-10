@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 114062226022497710}
   - component: {fileID: 1838675753}
   m_Layer: 0
-  m_Name: FreeZombieSimpleMovement
+  m_Name: Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,14 +437,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6da23a2cbdbf419e581162aa2eaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 5
+  m_moveSpeed: 1.5
   m_turnSpeed: 200
   m_animator: {fileID: 95446636183784616}
   m_rigidBody: {fileID: 54174046382449110}
   m_controlMode: 0
   player: {fileID: 0}
   playerHealth: {fileID: 0}
-  health: 20
 --- !u!136 &1838675753
 CapsuleCollider:
   m_ObjectHideFlags: 0
