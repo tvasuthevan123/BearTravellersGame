@@ -27,7 +27,7 @@ friend: Please can I use the medkit? I'm really low on health, feels like it any
         ~ friendship_meter -= 15
         Me: I'm sorry, I was injured back there and needed it for myself #speaker:Player
         friend: …. You used it for yourself? Do you not see my condition here. Fine, whatever... let's work on getting out of here #speaker:Friend
-        Me: ... #speaker:Player
+        Me: ... #speaker:Player 
         ->darknessComing
 
 === getMedkitDialogue ===
