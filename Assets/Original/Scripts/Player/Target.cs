@@ -20,7 +20,7 @@ public class Target : MonoBehaviour
                     Destroy(GameObject.FindWithTag("zombiehard1"));
                 }
             }
-            else if (gameObject.CompareTag("zombieeasy1"))
+            if (gameObject.CompareTag("zombieeasy1"))
             {
                 StoryManager.instance.zombieGroupEasyOneCounter--;
                 if (StoryManager.instance.zombieGroupEasyOneCounter <= 0)
@@ -28,7 +28,7 @@ public class Target : MonoBehaviour
                     Destroy(GameObject.FindWithTag("zombieeasy1"));
                 }
             }
-            else if (gameObject.CompareTag("zombiefriend"))
+            if (gameObject.CompareTag("zombiefriend"))
             {
                 StoryManager.instance.zombieGroupFriendCounter--;
                 if (StoryManager.instance.zombieGroupFriendCounter <= 0)
