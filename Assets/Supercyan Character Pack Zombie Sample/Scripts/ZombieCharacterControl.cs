@@ -21,6 +21,10 @@ public class ZombieCharacterControl : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private PlayerHealth playerHealth;
 
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip defaultSound;
+
+
 
     private Vector3 m_currentDirection = Vector3.zero;
     private bool playerInRange = false;
@@ -68,9 +72,19 @@ public class ZombieCharacterControl : MonoBehaviour
     }
 
     void AttackPlayer(){
+        StartCoroutine(PlayAttackSound());
         if(playerInRange){
             playerHealth.TakeDamage(20f);
         }
+    }
+
+    IEnumerator PlayAttackSound(){
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
+        audio.clip = attackSound;
+        audio.Play();
+        audio.clip = defaultSound;
     }
 
     void DisableMovement(){
