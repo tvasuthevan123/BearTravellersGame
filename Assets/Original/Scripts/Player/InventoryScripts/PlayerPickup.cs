@@ -30,6 +30,7 @@ public class PlayerPickup : MonoBehaviour
                 if (hit.transform.CompareTag("medkit"))
                 {
                     healthitems.addMedkit();
+                    StoryManager.instance.SetVariable("hasMedkit", true);
                 }
                 if (hit.transform.CompareTag("ammo"))
                 {

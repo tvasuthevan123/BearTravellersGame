@@ -27,7 +27,7 @@ public class HealthItems : MonoBehaviour
     {
         if (medkits > 0)
         {
-            medkits--;
+            removeMedkit();
             playerHealth.heal(50);
         }
     }
@@ -35,5 +35,10 @@ public class HealthItems : MonoBehaviour
     public void addMedkit()
     {
         medkits++;
+    }
+
+    public void removeMedkit()
+    {
+        medkits--;
     }
 }

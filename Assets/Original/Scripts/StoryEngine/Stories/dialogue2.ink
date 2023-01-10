@@ -4,6 +4,7 @@ INCLUDE globals.ink
 { hasMedkit == true : -> medkitDialogue | ->getMedkitDialogue}
 
 === first ===
+~ firstTime = false
 Me: FRIEND are you okay? You look awful #speaker:Player
 friend: no I'm not, they nearly got me back there, they came from the darkness #speaker:Friend
 Me: who came from the darkness? #speaker:Player
@@ -19,15 +20,27 @@ friend: Please can I use the medkit? I'm really low on health, feels like it any
         ~ giveMedkit = true
         friend: thank you, I really needed that #speaker:Friend
         Me Your welcome, now lets focus on getting out #speaker:Player
-        ->END
+        ->darknessComing
     * [Use Medkit]
         ~ giveMedkit = false
         Me: I'm sorry, I was injured back there and needed it for myself #speaker:Player
         friend: …. You used it for yourself? Do you not see my condition here. Fine, whatever... let's work on getting out of here #speaker:Friend
         Me: ... #speaker:Player
-        ->END
--> END
+        ->darknessComing
 
 === getMedkitDialogue ===
 friend: The medkit, behind you, over that way - can you get it please? #speaker:Friend
 -> END
+
+=== darknessComing ===
+Me: something weird is going on, I can't seem to get over this fence, it's like theres a force stopping me									
+Friend: yeah I've noticed it too, it's like we're really the characters from GAMENAME.
+Me: do you remember what the game was about?
+Friend: no, we only just started playing it… I remember finding it on a random game forum
+#cutscene:darknessApproaches1
+Friend: the darkness, it's moving towards us… it's closing in on us					
+Friend: I think we need to continue forward and try and find a way out
+Me: okay good idea…
+#cutscene:friendRuns
+#disable:true
+->END

@@ -18,12 +18,13 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update(){
         if(playerInRange && !StoryManager.instance.isDialoguePlaying){
-            visualCue.SetActive(true);
+            if(visualCue)
+                visualCue.SetActive(true);
             if(!eventTriggered && Input.GetKeyDown(KeyCode.E)){
                 StoryManager.instance.EnterDialogue(inkJSON);
             }
         }
-        else
+        else if(visualCue)
             visualCue.SetActive(false);
     }
 

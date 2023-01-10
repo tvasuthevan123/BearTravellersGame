@@ -6,4 +6,4 @@ player: I…. I didn't mean to, it was an accident
 friend: what do you mean it was an accident you just shot me man
 player: its these controls, its like I forgot how to control myself for a second
 player: I'm really sorry
-voice: haha you actually done it, here's some bullets for your trouble
+voice: haha you actually did it, I guess I'll let you have some bullets...

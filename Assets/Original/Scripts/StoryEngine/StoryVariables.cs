@@ -5,12 +5,14 @@ using Ink.Runtime;
 public class StoryVariables
 {
     public Dictionary<string, Ink.Runtime.Object> variables {get; private set;}
+    public Transform player;
     public void StartListening(Story story){
         VariablesToStory(story);
         story.variablesState.variableChangedEvent += VariableChanged;
     }
 
-    public StoryVariables(TextAsset globalStateJSON){
+    public StoryVariables(TextAsset globalStateJSON, Transform player){
+        this.player = player;
         Story globalState = new Story(globalStateJSON.text);
         variables = new Dictionary<string, Ink.Runtime.Object>();
         foreach(string name in globalState.variablesState){
@@ -28,6 +30,9 @@ public class StoryVariables
     void VariableChanged(string name, Ink.Runtime.Object value){
         Debug.Log("Variable changed: " + name + " = " + value);
         if(variables.ContainsKey(name)){
+            if(name == "giveMedkit" && (Ink.Runtime.BoolValue) value == true){
+                player.GetComponent<HealthItems>().removeMedkit();
+            }
             variables.Remove(name);
             variables.Add(name, value);
         }

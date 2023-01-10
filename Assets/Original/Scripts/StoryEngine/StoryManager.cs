@@ -10,6 +10,7 @@ public class StoryManager : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private Transform player;
 
     [Header("Variables File")]
     [SerializeField] private TextAsset globalStateJSON;
@@ -50,7 +51,7 @@ public class StoryManager : MonoBehaviour
         }
         instance = this;
 
-        storyVariables = new StoryVariables(globalStateJSON);
+        storyVariables = new StoryVariables(globalStateJSON, player);
     }
 
     void Start()
@@ -244,6 +245,24 @@ public class StoryManager : MonoBehaviour
         if (variableValue == null)
             Debug.LogWarning("Variable " + name + " doesn't exist");
         return variableValue;
+    }
+
+    public void SetVariable(string variableName, string str)
+    {
+        Ink.Runtime.StringValue inkString = new Ink.Runtime.StringValue(str);
+        storyVariables.variables[variableName] = inkString;
+    }
+
+    public void SetVariable(string variableName, int num)
+    {
+        Ink.Runtime.IntValue inkNum = new Ink.Runtime.IntValue(num);
+        storyVariables.variables[variableName] = inkNum;
+    }
+
+    public void SetVariable(string variableName, bool boolean)
+    {
+        Ink.Runtime.BoolValue inkBool = new Ink.Runtime.BoolValue(boolean);
+        storyVariables.variables[variableName] = inkBool;
     }
 
     public void EnterNote(string noteText){

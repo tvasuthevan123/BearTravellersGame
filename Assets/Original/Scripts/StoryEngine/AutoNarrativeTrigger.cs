@@ -7,10 +7,14 @@ public class AutoNarrativeTrigger : MonoBehaviour
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private bool doesStop;
 
     private void OnTriggerEnter(Collider collider){
         if(!hasTriggered && collider.gameObject.tag == "Player"){
-            StoryManager.instance.EnterAutoDialogue(inkJSON);
+            if(doesStop)
+                StoryManager.instance.EnterDialogue(inkJSON);
+            else
+                StoryManager.instance.EnterAutoDialogue(inkJSON);
             hasTriggered = true;
         }
     }
