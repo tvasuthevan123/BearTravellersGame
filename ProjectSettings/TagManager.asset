@@ -17,6 +17,8 @@ TagManager:
   - zombieeasy1
   - zombiehard1
   - zombiefriend
+  - friendchoiceneg
+  - friendchoicepos
   layers:
   - Default
   - TransparentFX

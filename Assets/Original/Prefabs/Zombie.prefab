@@ -449,6 +449,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   attackSound: {fileID: 8300000, guid: d816eac0bbb558647a7c90858f5fa775, type: 3}
   defaultSound: {fileID: 8300000, guid: 622a38a53a6bf9d47b8cb3323b7ee37c, type: 3}
+  zombieHitBox: {fileID: 136043099458248162}
 --- !u!136 &1838675753
 CapsuleCollider:
   m_ObjectHideFlags: 0
