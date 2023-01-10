@@ -8,6 +8,7 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] private LayerMask pickupLayer;
     [SerializeField] private new Transform camera;
     [SerializeField] private HealthItems healthitems;
+    [SerializeField] private Ammo ammo;
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject fence;
     [SerializeField] private GameObject button1a; //left path
@@ -29,6 +30,10 @@ public class PlayerPickup : MonoBehaviour
                 if (hit.transform.CompareTag("medkit"))
                 {
                     healthitems.addMedkit();
+                }
+                if (hit.transform.CompareTag("ammo"))
+                {
+                    ammo.addAmmo(5);
                 }
                 if (hit.transform.CompareTag("button1a") && path1choice == false)
                 {

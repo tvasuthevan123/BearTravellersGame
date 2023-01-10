@@ -13,6 +13,7 @@ TagManager:
   - path1a
   - button1a
   - button1b
+  - ammo
   layers:
   - Default
   - TransparentFX
