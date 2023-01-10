@@ -40,7 +40,7 @@ public class StoryManager : MonoBehaviour
     public static StoryManager instance { get; private set; }
 
     private const string SPEAKER_TAG = "speaker";
-    private const string CUTSCENE_TAG = "cutscene";
+    private const string CUTSCENE_TAG = "Cutscene";
     private const string AUDIO_TAG = "audio";
 
     private GameObject trigger;
@@ -168,18 +168,16 @@ public class StoryManager : MonoBehaviour
                         case "Darkness":
                             storyText.color = new Color(125/255f, 2/255f, 232/255f);
                             break;
-                        case "Cutscene":
-                            director.Play(int.Parse(value));
-                            break;
-                        case "Disable":
-                            trigger.SetActive(false);
-                            break;
                         default:
                             storyText.color = Color.black;
                             break;
                     }
                     break;
                 case CUTSCENE_TAG:
+                    director.Play(int.Parse(value));
+                    break;
+                case "Disable":
+                    trigger.SetActive(false);
                     break;
                 case AUDIO_TAG:
                     break;

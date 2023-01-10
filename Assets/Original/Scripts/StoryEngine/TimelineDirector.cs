@@ -11,11 +11,11 @@ public class TimelineDirector : MonoBehaviour
 
     public void Play(int animIndex){
         cutscenes[animIndex].SetActive(true);
-
+        StartCoroutine(restart());
     }
 
     IEnumerator restart(){
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         scenefader.FadeTo("GameWorldRework");
     }
 
