@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public float chipSpeed = 2f;
     public Image frontHealthBar;
     public Image backHealthBar;
+    [SerializeField] private Scenefader scenefader;
+    [SerializeField] private TextAsset deathDialogue;
 
     void Start(){
         health = maxHealth;
@@ -49,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
@@ -62,8 +64,10 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Die(){
-        
+    public IEnumerator Die(){
+        StoryManager.instance.EnterDialogue(deathDialogue, null);
+        yield return new WaitForSeconds(1.5f);
+        scenefader.FadeTo("GameWorldRework");
     }
 
 }
