@@ -12,6 +12,8 @@ public class Gun : MonoBehaviour
 
     public Ammo gunAmmo;
 
+    [SerializeField] private AudioClip gunShot;
+
     void Update() {
         if(Input.GetButtonDown("Fire1")){
             Shoot();
@@ -21,6 +23,9 @@ public class Gun : MonoBehaviour
     void Shoot(){
         muzzleFlash.Play();
         gunAmmo.ammoUsage();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = gunShot;
+        audio.Play();
         RaycastHit hit;
         if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range)){
             Debug.Log(hit.transform.name);
