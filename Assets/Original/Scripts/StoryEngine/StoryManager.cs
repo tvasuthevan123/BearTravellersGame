@@ -26,7 +26,6 @@ public class StoryManager : MonoBehaviour
     [Header("Note UI")]
     [SerializeField] private GameObject notePanel;
     [SerializeField] private TextMeshProUGUI noteText;
-    [SerializeField] private GameObject[] cutscenes;
 
     private TextMeshProUGUI[] choicesText;
 
@@ -51,6 +50,7 @@ public class StoryManager : MonoBehaviour
     public int zombieGroupHardOneCounter = 6;
 
     public GameObject zombieGroupEasyOne;
+    public TimelineDirector director;
     public int zombieGroupEasyOneCounter = 6;
 
     void Awake()
@@ -164,7 +164,7 @@ public class StoryManager : MonoBehaviour
                             storyText.color = new Color(125/255f, 2/255f, 232/255f);
                             break;
                         case "Cutscene":
-                            cutscenes[int.Parse(value)].SetActive(true);
+                            director.Play(int.Parse(value));
                             break;
                         case "Disable":
                             trigger.SetActive(false);

@@ -1,7 +1,10 @@
 INCLUDE globals.ink
 
-
+Friend: I'm here, I'm here - the zombies hit hard... I'm not sure if I'm gonna make it...
 { friendship_meter > 5 : -> goodChoices | -> badChoices }
+#end:true
+
+
 === badChoices ===
     * [Save them]
         -> badSave
@@ -42,5 +45,5 @@ Friend: You've done nothing but betray me since we got here, you deserve this
 Me: I'm sorry, it's too close, I don't have time...
 Friend: That's okay, at least one of us is gonna make it out of this hell hole
 Me: I'll try and find a way to get you back...
-#cutscene:5
+#cutscene:1
 ->END
