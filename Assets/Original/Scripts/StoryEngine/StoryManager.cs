@@ -51,13 +51,10 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-
-
         isDialoguePlaying = false;
         isNoteOpen = false;
         notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
         storyPanel.SetActive(false);
-
 
         choicesText = new TextMeshProUGUI[choices.Length];
 
@@ -211,6 +208,7 @@ public class StoryManager : MonoBehaviour
     }
 
     public void EnterNote(string noteText){
+        Debug.Log("Note opened");
         isNoteOpen = true;
         notePanel.GetComponent<Animator>().SetBool("isNoteOpen", true);
         this.noteText.text = noteText; 

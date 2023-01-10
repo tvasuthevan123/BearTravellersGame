@@ -20,11 +20,9 @@ public class NoteTrigger : MonoBehaviour
         if(playerInRange){
             visualCue.SetActive(true);
             if(!StoryManager.instance.isNoteOpen && Input.GetKeyDown(KeyCode.E)){
-                Debug.Log("Note opened");
                 StoryManager.instance.EnterNote(noteText);
             }
             else if(StoryManager.instance.isNoteOpen && Input.GetKeyDown(KeyCode.E)){
-                Debug.Log("Note closed");
                 StoryManager.instance.ExitNote();
             }
         }
