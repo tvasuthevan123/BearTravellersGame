@@ -10,6 +10,11 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] private HealthItems healthitems;
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject fence;
+    [SerializeField] private GameObject button1a; //left path
+    [SerializeField] private GameObject button1b; //right path
+    [SerializeField] private GameObject rock1a; //left path
+    [SerializeField] private GameObject rock1b; //right path
+    private bool path1choice = false;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.E)){
@@ -24,6 +29,18 @@ public class PlayerPickup : MonoBehaviour
                 if (hit.transform.CompareTag("medkit"))
                 {
                     healthitems.addMedkit();
+                }
+                if (hit.transform.CompareTag("button1a") && path1choice == false)
+                {
+                    rock1a.SetActive(false); //TODO: ADD SOUND?
+                    button1b.SetActive(false);
+                    path1choice = true;
+                }
+                if (hit.transform.CompareTag("button1b") && path1choice == false)
+                {
+                    rock1b.SetActive(false); //TODO: ADD SOUND?
+                    button1a.SetActive(false); // opposite button removed
+                    path1choice = true;
                 }
                 Destroy(hit.transform.gameObject);
             }

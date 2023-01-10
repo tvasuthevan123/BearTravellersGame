@@ -10,6 +10,9 @@ TagManager:
   - gunpickup
   - medkit
   - oldfence
+  - path1a
+  - button1a
+  - button1b
   layers:
   - Default
   - TransparentFX
