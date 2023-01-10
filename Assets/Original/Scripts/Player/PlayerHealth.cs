@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            //TODO: gameover
+            Die();
         }
     }
 
@@ -60,6 +60,10 @@ public class PlayerHealth : MonoBehaviour
         {
             health = maxHealth;
         }
+    }
+
+    public void Die(){
+        
     }
 
 }

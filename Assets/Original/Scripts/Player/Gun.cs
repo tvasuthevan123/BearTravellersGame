@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     public Ammo gunAmmo;
 
     void Update() {
-        if(Input.GetButtonDown("Fire1")){
+        if(!StoryManager.instance.isDialoguePlaying && !StoryManager.instance.isNoteOpen && Input.GetButtonDown("Fire1")){
             Shoot();
         }
     }

@@ -98,7 +98,7 @@ public class ZombieCharacterControl : MonoBehaviour
 
     public void Die(){
         AudioSource audio = GetComponent<AudioSource>();
-        audio.Stop();
+        audio.enabled = false;
         m_controlMode = ControlMode.Stop;
         m_animator.SetTrigger("Dead");
         
