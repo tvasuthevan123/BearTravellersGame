@@ -26,6 +26,7 @@ public class StoryManager : MonoBehaviour
     [Header("Note UI")]
     [SerializeField] private GameObject notePanel;
     [SerializeField] private TextMeshProUGUI noteText;
+    [SerializeField] private GameObject[] cutscenes;
 
     private TextMeshProUGUI[] choicesText;
 
@@ -42,6 +43,8 @@ public class StoryManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string CUTSCENE_TAG = "cutscene";
     private const string AUDIO_TAG = "audio";
+
+    private GameObject trigger;
 
     void Awake()
     {
@@ -80,8 +83,9 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(TextAsset inkJSON)
+    public void EnterDialogue(TextAsset inkJSON, GameObject trigger)
     {
+        this.trigger = trigger;
         isAuto = false;
         currentStorySegment = new Story(inkJSON.text);
         isDialoguePlaying = true;
@@ -148,6 +152,12 @@ public class StoryManager : MonoBehaviour
                             break;
                         case "Darkness":
                             storyText.color = new Color(125/255f, 2/255f, 232/255f);
+                            break;
+                        case "Cutscene":
+                            cutscenes[int.Parse(value)].SetActive(true);
+                            break;
+                        case "Disable":
+                            trigger.SetActive(false);
                             break;
                         default:
                             storyText.color = Color.black;

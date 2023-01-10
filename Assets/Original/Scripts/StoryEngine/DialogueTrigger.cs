@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
             if(visualCue)
                 visualCue.SetActive(true);
             if(!eventTriggered && Input.GetKeyDown(KeyCode.E)){
-                StoryManager.instance.EnterDialogue(inkJSON);
+                StoryManager.instance.EnterDialogue(inkJSON, this.gameObject);
             }
         }
         else if(visualCue)

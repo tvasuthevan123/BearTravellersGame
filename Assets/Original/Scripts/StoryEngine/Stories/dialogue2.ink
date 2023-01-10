@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-{ firstTime == true : -> first }
+{ firstTime == true && hasMedkit!=false : -> first }
 { hasMedkit == true : -> medkitDialogue | ->getMedkitDialogue}
 
 === first ===
@@ -43,6 +43,6 @@ Friend: no, we only just started playing it… I remember finding it on a random
 Friend: the darkness, it's moving towards us… it's closing in on us					
 Friend: I think we need to continue forward and try and find a way out
 Me: okay good idea…
-#cutscene:friendRuns
+#cutscene:0
 #disable:true
 ->END
