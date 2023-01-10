@@ -45,6 +45,7 @@ public class StoryManager : MonoBehaviour
     private const string AUDIO_TAG = "audio";
 
     private GameObject trigger;
+    private MusicManager musicManager;
 
     void Awake()
     {
@@ -65,6 +66,9 @@ public class StoryManager : MonoBehaviour
         storyPanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
+
+        musicManager = MusicManager.Instance;
+        musicManager.PlaySpawnMusic();
 
         for (int i = 0; i < choices.Length; i++)
         {
