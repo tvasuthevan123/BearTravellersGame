@@ -174,9 +174,9 @@ public class StoryManager : MonoBehaviour
                     }
                     break;
                 case CUTSCENE_TAG:
-                    director.Play(int.Parse(value));
+                    director.Play(int.Parse(value), true);
                     break;
-                case "Disable":
+                case "disable":
                     trigger.SetActive(false);
                     break;
                 case AUDIO_TAG:

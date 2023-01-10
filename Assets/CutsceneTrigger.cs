@@ -8,7 +8,7 @@ public class CutsceneTrigger : MonoBehaviour
     [SerializeField] private int cutsceneTriggered;
     void OnTriggerEnter(Collider other){
         if(other.gameObject.tag == "Player"){
-            director.Play(cutsceneTriggered);
+            director.Play(cutsceneTriggered, false);
         }
     }
 }

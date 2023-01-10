@@ -9,9 +9,10 @@ public class TimelineDirector : MonoBehaviour
     public PlayableDirector director;
     public GameObject[] cutscenes;
 
-    public void Play(int animIndex){
+    public void Play(int animIndex, bool respawn){
         cutscenes[animIndex].SetActive(true);
-        StartCoroutine(restart());
+        if(respawn)
+            StartCoroutine(restart());
     }
 
     IEnumerator restart(){
