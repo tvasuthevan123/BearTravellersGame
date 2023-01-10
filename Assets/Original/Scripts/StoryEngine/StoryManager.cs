@@ -148,8 +148,8 @@ public class StoryManager : MonoBehaviour
 
         if (isAuto)
         {
-            Debug.Log("Waiting for " + (float)((line.Length / 25 * 2) + 2) + " seconds");
-            yield return new WaitForSeconds((float)((line.Length / 25 * 2) + 2));
+            Debug.Log("Waiting for " + (float)((line.Length / 25) + 2) + " seconds");
+            yield return new WaitForSeconds((float)((line.Length / 25) + 2));
             ContinueStorySegment(isAuto);
         }
 
