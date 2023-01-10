@@ -38,6 +38,10 @@ public class StoryManager : MonoBehaviour
     public bool isNoteOpen { get; private set; }
     public static StoryManager instance { get; private set; }
 
+    private const string SPEAKER_TAG = "speaker";
+    private const string CUTSCENE_TAG = "cutscene";
+    private const string AUDIO_TAG = "audio";
+
     void Awake()
     {
         if (instance != null)
@@ -116,12 +120,47 @@ public class StoryManager : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStorySegment.Continue();
+            HandleTags(currentStorySegment.currentTags);
             // handle tags
             displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
         }
         else
         {
             StartCoroutine(ExitStorySegment());
+        }
+    }
+
+    private void HandleTags(List<string> tags){
+        foreach(string tag in tags){
+            string[] splitTags = tag.Split(':');
+            string key = splitTags[0].Trim();
+            string value = splitTags[1].Trim();
+
+            switch(key){
+                case SPEAKER_TAG:
+                    switch(value){
+                        case "Friend":
+                            storyText.color = Color.green;
+                            break;
+                        case "Player":
+                            storyText.color = Color.white;
+                            break;
+                        case "Darkness":
+                            storyText.color = new Color(125/255f, 2/255f, 232/255f);
+                            break;
+                        default:
+                            storyText.color = Color.black;
+                            break;
+                    }
+                    break;
+                case CUTSCENE_TAG:
+                    break;
+                case AUDIO_TAG:
+                    break;
+                default:
+                    Debug.LogWarning("Unrecognised tag");
+                    break;
+            }
         }
     }
 
