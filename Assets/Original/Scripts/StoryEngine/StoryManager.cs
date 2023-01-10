@@ -51,7 +51,7 @@ public class StoryManager : MonoBehaviour
 
     public GameObject zombieGroupEasyOne;
     public TimelineDirector director;
-    public int zombieGroupEasyOneCounter = 6;
+    public int zombieGroupEasyOneCounter = 4;
 
     public GameObject zombieGroupFriend;
     public int zombieGroupFriendCounter = 3;

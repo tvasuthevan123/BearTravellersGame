@@ -24,6 +24,7 @@ public class ZombieCharacterControl : MonoBehaviour
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip defaultSound;
 
+    public CapsuleCollider zombieHitBox;
 
 
     private Vector3 m_currentDirection = Vector3.zero;
@@ -99,9 +100,10 @@ public class ZombieCharacterControl : MonoBehaviour
     public void Die(){
         AudioSource audio = GetComponent<AudioSource>();
         audio.enabled = false;
+        audio.Stop();
         m_controlMode = ControlMode.Stop;
         m_animator.SetTrigger("Dead");
-        
+        zombieHitBox.enabled = false;
     }
 
     public void OnTriggerEnter(Collider collider){
