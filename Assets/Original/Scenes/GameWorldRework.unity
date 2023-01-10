@@ -3671,7 +3671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809748384316474281, guid: abf8caee7ff8cf64caabc5f30209f41d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 301.13
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5809748384316474281, guid: abf8caee7ff8cf64caabc5f30209f41d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3679,7 +3679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809748384316474281, guid: abf8caee7ff8cf64caabc5f30209f41d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 398.32
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 5809748384316474281, guid: abf8caee7ff8cf64caabc5f30209f41d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26713,7 +26713,6 @@ Transform:
   m_Children:
   - {fileID: 558195983}
   - {fileID: 2095349967}
-  - {fileID: 1027695034}
   - {fileID: 1654148113}
   - {fileID: 2019018140}
   m_Father: {fileID: 0}
@@ -28402,7 +28401,7 @@ MonoBehaviour:
   cutscenes:
   - {fileID: 558195982}
   - {fileID: 2095349965}
-  - {fileID: 1027695033}
+  - {fileID: 0}
   - {fileID: 1654148112}
   - {fileID: 2019018139}
 --- !u!4 &727790687 stripped
@@ -60131,7 +60130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 682258953}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -100.516, z: 0}
 --- !u!320 &1654148114
 PlayableDirector:
@@ -73786,7 +73785,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 682258953}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -100.516, z: 0}
 --- !u!320 &2019018141
 PlayableDirector:
