@@ -39,8 +39,9 @@ public class Gun : MonoBehaviour
                 hit.rigidbody.AddForce(- hit.normal * impactForce);
             }
 
-            GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impact, 2f);
+            // TODO : Add impact effect
+            // GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            // Destroy(impact, 2f);
         }
     }
 

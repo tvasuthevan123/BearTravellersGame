@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("Visual Cue")]
@@ -9,32 +8,46 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
+    [SerializeField] private Transform player;
+    [SerializeField] private Vector3 dialogueLook, dialoguePosition;
+
     private bool playerInRange;
     private bool eventTriggered = false;
 
-    private void Awake(){
+    private void Awake()
+    {
         visualCue.SetActive(false);
     }
 
-    void Update(){
-        if(playerInRange && !StoryManager.instance.isDialoguePlaying){
-            if(visualCue)
+    void Update()
+    {
+        if (playerInRange && !StoryManager.instance.isDialoguePlaying)
+        {
+            if (visualCue)
                 visualCue.SetActive(true);
-            if(!eventTriggered && Input.GetKeyDown(KeyCode.E)){
+            if (!eventTriggered && Input.GetKeyDown(KeyCode.E))
+            {
+                if (dialogueLook != null && dialoguePosition != null)
+                {
+                    player.position = dialoguePosition;
+                    player.LookAt(dialogueLook);
+                }
                 StoryManager.instance.EnterDialogue(inkJSON, this.gameObject);
             }
         }
-        else if(visualCue)
+        else if (visualCue)
             visualCue.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider collider){
-        if(collider.gameObject.tag == "Player")
-            playerInRange=true;
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+            playerInRange = true;
     }
 
-    private void OnTriggerExit(Collider collider){
-        if(collider.gameObject.tag == "Player")
-            playerInRange=false;
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+            playerInRange = false;
     }
 }

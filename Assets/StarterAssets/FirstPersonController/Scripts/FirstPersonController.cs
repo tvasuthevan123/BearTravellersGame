@@ -112,9 +112,9 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
-		// public void ToggleInput(){
-		// 	disableInput = !disableInput;
-		// }
+		public void ToggleInput(){
+			disableInput = !disableInput;
+		}
 
 		private void Update()
 		{
