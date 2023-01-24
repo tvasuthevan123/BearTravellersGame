@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3686042937779122158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0.98, z: 5.12}
-  m_LocalScale: {x: 1, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 2.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4946059564661770671}
   m_Father: {fileID: 0}
@@ -60,7 +60,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 3686042937799205280}
-  inkJSON: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: 5475442bd0730824a853eec946826ca5, type: 3}
+  player: {fileID: 0}
+  playerCamera: {fileID: 0}
+  dialogueLook: {x: 0, y: 0, z: 0}
+  dialoguePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &3686042937799205280
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,17 +90,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3686042937799205280}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -4.67}
+  m_LocalRotation: {x: -0, y: -0.8665191, z: -0, w: 0.49914384}
+  m_LocalPosition: {x: 0, y: 0, z: -4.6576996}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3686042937779122154}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120.113, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.07}
+  m_AnchoredPosition: {x: 0.7756462, y: 0.069999985}
   m_SizeDelta: {x: 0.9053, y: 0.4616}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3686042937799205283

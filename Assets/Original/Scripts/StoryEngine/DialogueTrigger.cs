@@ -8,7 +8,8 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform player, playerCamera;
+
     [SerializeField] private Vector3 dialogueLook, dialoguePosition;
 
     private bool playerInRange;
@@ -27,10 +28,10 @@ public class DialogueTrigger : MonoBehaviour
                 visualCue.SetActive(true);
             if (!eventTriggered && Input.GetKeyDown(KeyCode.E))
             {
-                if (dialogueLook != null && dialoguePosition != null)
+                if (dialogueLook != Vector3.zero && dialoguePosition != Vector3.zero)
                 {
                     player.position = dialoguePosition;
-                    player.LookAt(dialogueLook);
+                    playerCamera.LookAt(dialogueLook);
                 }
                 StoryManager.instance.EnterDialogue(inkJSON, this.gameObject);
             }
