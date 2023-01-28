@@ -5,10 +5,10 @@ INCLUDE globals.ink
 
 === first ===
 ~ firstTime = false
-Me: FRIEND are you okay? You look awful #speaker:Player
+Me: Jim are you okay? You look awful #speaker:Player
 friend: no I'm not, they nearly got me back there, they came from the darkness #speaker:Friend
 Me: who came from the darkness? #speaker:Player
-friend: not who, but what… don’t you remember the ENEMIES from GAMENAME, they're here #speaker:Friend
+friend: not who, but what… don’t you remember the ENEMIES from Lost in the Woods, they're here #speaker:Friend
 Me: how did this happen? How have we ended up here, do you remember anything? #speaker:Player
 friend: no my memory is foggy, I only remember waking up in these woods and I've been searching since *cough* #speaker:Friend
 friend: could you hand me that medkit behind you? I could really use it right now #speaker:Friend
@@ -20,7 +20,7 @@ friend: Please can I use the medkit? I'm really low on health, feels like it any
         ~ giveMedkit = true
         ~ friendship_meter += 15
         friend: thank you, I really needed that #speaker:Friend
-        Me Your welcome, now lets focus on getting out #speaker:Player
+        Me: your welcome, now lets focus on getting out #speaker:Player
         ->darknessComing
     * [Use Medkit]
         ~ giveMedkit = false
@@ -36,7 +36,7 @@ friend: The medkit, behind you, over that way - can you get it please? #speaker:
 
 === darknessComing ===
 Me: something weird is going on, I can't seem to get over this fence, it's like theres a force stopping me									
-Friend: yeah I've noticed it too, it's like we're really the characters from GAMENAME.
+Friend: yeah I've noticed it too, it's like we're really the characters from Lost in the Woods.
 Me: do you remember what the game was about?
 Friend: no, we only just started playing it… I remember finding it on a random game forum
 #cutscene:darknessApproaches1
