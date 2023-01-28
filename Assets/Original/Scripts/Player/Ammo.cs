@@ -10,6 +10,8 @@ public class Ammo : MonoBehaviour
     public PlayerHealth playerHealth;
     public TextMeshProUGUI ammoDisplay;
 
+    [SerializeField] private AudioClip pickupAmmo;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,9 @@ public class Ammo : MonoBehaviour
 
     public void addAmmo(int ammoAmount)
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = pickupAmmo;
+        audio.Play();
         ammo += ammoAmount;
     }
 }

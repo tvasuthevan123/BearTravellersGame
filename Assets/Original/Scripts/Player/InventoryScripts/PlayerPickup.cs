@@ -17,6 +17,8 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] private GameObject rock1b; //right path
     private bool path1choice = false;
 
+    [SerializeField] private AudioClip pickupGun;
+
     void Update(){
         if(Input.GetKeyDown(KeyCode.E)){
             RaycastHit hit;
@@ -24,6 +26,9 @@ public class PlayerPickup : MonoBehaviour
                 Debug.Log("Hit: " + hit.transform.name);
                 if (hit.transform.CompareTag("gunpickup")) 
                 {
+                    AudioSource audio = GetComponent<AudioSource>();
+                    audio.clip = pickupGun;
+                    audio.Play();
                     gun.SetActive(true);
                     fence.SetActive(false);
                 }
