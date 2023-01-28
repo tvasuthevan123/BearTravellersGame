@@ -11,18 +11,23 @@ public class NoteTrigger : MonoBehaviour
     [SerializeField] private string noteText;
 
     private bool playerInRange;
+    private AudioSource paperSFX;
 
     private void Awake(){
         visualCue.SetActive(false);
+        paperSFX = GetComponent<AudioSource>();
     }
 
     void Update(){
         if(playerInRange){
             visualCue.SetActive(true);
             if(!StoryManager.instance.isNoteOpen && Input.GetKeyDown(KeyCode.E)){
+                Debug.Log("Note Triggered");
+                paperSFX.Play();
                 StoryManager.instance.EnterNote(noteText);
             }
             else if(StoryManager.instance.isNoteOpen && Input.GetKeyDown(KeyCode.E)){
+                Debug.Log("Note Closed");
                 StoryManager.instance.ExitNote();
             }
         }
