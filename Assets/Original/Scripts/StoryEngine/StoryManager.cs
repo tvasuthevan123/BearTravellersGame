@@ -296,7 +296,6 @@ public class StoryManager : MonoBehaviour
     }
 
     public void ExitNote(){
-        Debug.Log("Note closed");
         isNoteOpen = false;
         notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
     }

@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 1328215470}
   - component: {fileID: 1328215472}
   - component: {fileID: 1328215471}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NoteNearbyIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,9 +802,8 @@ GameObject:
   - component: {fileID: 4883379289703763026}
   - component: {fileID: 4883379289707154546}
   - component: {fileID: 4883379289706188466}
-  - component: {fileID: 4883379289703927933}
   - component: {fileID: 754680043125256885}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NotePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4883379289703927922}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 625, y: 142, z: -1.6}
+  m_LocalPosition: {x: 625, y: -478, z: -1.6}
   m_LocalScale: {x: 1374.8102, y: 1374.8102, z: 1374.8102}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -877,20 +876,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4883379289703927933
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883379289703927922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ac8910006b2a62947a9342d2b6ddfa2a, type: 3}
 --- !u!95 &754680043125256885
 Animator:
   serializedVersion: 4
@@ -920,7 +905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7537768057585807057}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NarrativeView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6196314462393842805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1544,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
