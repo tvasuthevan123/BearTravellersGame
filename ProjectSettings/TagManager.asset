@@ -19,6 +19,7 @@ TagManager:
   - zombiefriend
   - friendchoiceneg
   - friendchoicepos
+  - bush
   layers:
   - Default
   - TransparentFX

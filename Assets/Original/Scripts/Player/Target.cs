@@ -6,6 +6,13 @@ public class Target : MonoBehaviour
 {
     public float health = 50f;
 
+    private MusicManager musicManager;
+
+    private void Start()
+    {
+        musicManager = MusicManager.Instance;
+    }
+
     public void TakeDmg(float amount)
     {
         health -= amount;
@@ -18,6 +25,7 @@ public class Target : MonoBehaviour
                 if (StoryManager.instance.zombieGroupHardOneCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombiehard1"));
+                    musicManager.PlaySpawnMusic();
                 }
             }
             if (gameObject.CompareTag("zombieeasy1"))
@@ -26,6 +34,7 @@ public class Target : MonoBehaviour
                 if (StoryManager.instance.zombieGroupEasyOneCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombieeasy1"));
+                    musicManager.PlaySpawnMusic();
                 }
             }
             if (gameObject.CompareTag("zombiefriend"))
@@ -34,6 +43,7 @@ public class Target : MonoBehaviour
                 if (StoryManager.instance.zombieGroupFriendCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombiefriend"));
+                    musicManager.PlaySpawnMusic();
                 }
             }
         }
