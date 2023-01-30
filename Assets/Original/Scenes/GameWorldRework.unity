@@ -3675,6 +3675,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5142532879768850087, guid: 5983c8a04c0e73047a6c860b9cd9aaad, type: 3}
   m_PrefabInstance: {fileID: 95229662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &96648878
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: ZombieLore2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 316.663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4308504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9024234
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 128.957
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: "No.... The zombies feel familiar... I don't think they want to hurt
+        us, I think they ARE us... \nWell, Not us specifically, but other players??
+        I'm not sure but I can't afford for them to kill me or my friend."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &96648879 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 96648878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &97246566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42932,6 +43008,12 @@ Transform:
   m_Children:
   - {fileID: 1043655125}
   - {fileID: 1116802330}
+  - {fileID: 1953587427}
+  - {fileID: 1508802812}
+  - {fileID: 1352297200}
+  - {fileID: 1324490955}
+  - {fileID: 96648879}
+  - {fileID: 2129545034}
   m_Father: {fileID: 111049450}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49118,6 +49200,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1025681519537473006, guid: aa99a810914c5b84b9bc5d51f95dd05c, type: 3}
   m_PrefabInstance: {fileID: 1321968891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1324490954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: TimeLore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 106.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 342.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.05551573
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9984578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 173.635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: 'I could have sworn this day feels familiar, have I been here before?
+
+        Though
+        things seem different too, These flowers seem to be slowly all turning blue
+        and I don''t understand that pattern...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &1324490955 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 1324490954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1326967246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50188,6 +50348,82 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1025681519537473006, guid: aa99a810914c5b84b9bc5d51f95dd05c, type: 3}
   m_PrefabInstance: {fileID: 2801217750999008339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1352297199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: DarknessLore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 49.417
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 207.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.95127916
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.30833083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 324.083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: "I don't think the voice can be trusted... I should stick by my friend,
+        and hope we can make it out together. \nBut I'm losing it, I don't know if
+        I can trust my friend either... How do I know what they're up to??"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &1352297200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 1352297199}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1357205461 stripped
 Transform:
@@ -57335,6 +57571,83 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5142532879768850087, guid: 5983c8a04c0e73047a6c860b9cd9aaad, type: 3}
   m_PrefabInstance: {fileID: 1508334197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1508802811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: ZombieLore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.879
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 204.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.41439828
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9100956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 131.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: "The zombies don't seem to feel pain, yet there is a lack of malice
+        behind their attacks. \nIt's as though they're tired of what they do, as
+        though they aren't trying to attack us, but instead they want to communicate
+        with us..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &1508802812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 1508802811}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1509050310
 GameObject:
@@ -74813,6 +75126,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2196e66c52d25ac469e55fb8f4d54d4a, type: 3}
+--- !u!1001 &1953587426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: HiddenItems
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -49.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 152.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5943032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8042411
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 107.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: Stop trying to explore, it's not worth it - A single hidden measly medkit?
+        For all that effort?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &1953587427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 1953587426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1953621113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81420,6 +81808,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407946972163067645, guid: 32c7b62dc5d2c1c4384df1848459c4f6, type: 3}
   m_PrefabInstance: {fileID: 2127091629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2129545033
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: ZombieLore2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 243.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7018773
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71229786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 269.156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: This whole split route "level" seems like a metaphor for my friendship
+        with INSERTFRIENDNAME... Almost as though whatever that darkness is *wants*
+        us to disagree and split up. Or maybe to tempt me to look out for myself
+        instead of also keep my friend safe by risking myself... Perhaps I need to
+        sacrifice to get out... but who?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &2129545034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 2129545033}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2129973151
 PrefabInstance:
