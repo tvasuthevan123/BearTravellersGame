@@ -77,8 +77,12 @@ public class NoteTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player"){
             playerInRange = false;
+            if(StoryManager.instance.isNoteOpen){
+                StoryManager.instance.ExitNote();
+            }
+        }
     }
 
     private void SetOpened()
