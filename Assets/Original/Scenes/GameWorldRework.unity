@@ -12377,11 +12377,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1693722299590490820, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_Size.y
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1693722299590490820, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_Center.y
-      value: 12.5
+      value: 18.6
       objectReference: {fileID: 0}
     - target: {fileID: 6003782631910994646, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_text
@@ -12429,7 +12429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.663
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12437,23 +12437,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.073
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.573786
+      value: 0.5155921
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.41324285
+      value: -0.48390576
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.41324282
+      value: -0.48390567
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.573786
+      value: 0.5155922
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12461,7 +12461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -71.523
+      value: -86.368
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -41158,11 +41158,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782631910994646, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_text
-      value: Explore, the voices may guide you...
+      value: If in doubt, follow the campfires and yellow lights
       objectReference: {fileID: 0}
     - target: {fileID: 6003782631910994646, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_fontSize
-      value: 2.4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6003782631910994646, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_fontAsset
@@ -41202,7 +41202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.309
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41210,23 +41210,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2550001
+      value: -3.86
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35696867
+      value: 0.2600654
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6103879
+      value: -0.65754545
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6103879
+      value: -0.65754545
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3569686
+      value: 0.2600653
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -41234,7 +41234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -119.36
+      value: -136.841
       objectReference: {fileID: 0}
     - target: {fileID: 6003782632349353568, guid: 730fb9403b7821645ade24083e18a35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -41998,6 +41998,81 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
   m_PrefabInstance: {fileID: 1116344454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1116802329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1123574977}
+    m_Modifications:
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Name
+      value: StartGap
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.835298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46200237
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8868787
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 124.967
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: noteText
+      value: It even makes it seem like we can escape through parts of the forest,
+        but it knows... It always knows...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c33063b52031bae4890de1785686830c, type: 3}
+--- !u!4 &1116802330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
+  m_PrefabInstance: {fileID: 1116802329}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1116836419
 PrefabInstance:
@@ -42856,6 +42931,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1043655125}
+  - {fileID: 1116802330}
   m_Father: {fileID: 111049450}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82190,9 +82266,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123574977}
     m_Modifications:
+    - target: {fileID: 5117830841411391612, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
       propertyPath: m_Name
-      value: NoteTrigger
+      value: StartEscape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363870105238240200, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5363870105238240206, guid: c33063b52031bae4890de1785686830c, type: 3}
       propertyPath: m_RootOrder
@@ -82246,6 +82330,18 @@ PrefabInstance:
         just follow the campfires and yellow lights. '
       objectReference: {fileID: 0}
     - target: {fileID: 5363870105238240207, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: nearbyIndicator
+      value: 
+      objectReference: {fileID: 2082366486}
+    - target: {fileID: 5702702832509848485, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986157686247044084, guid: c33063b52031bae4890de1785686830c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868667343195314658, guid: c33063b52031bae4890de1785686830c, type: 3}
       propertyPath: nearbyIndicator
       value: 
       objectReference: {fileID: 2082366486}
