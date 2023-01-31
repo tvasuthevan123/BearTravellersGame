@@ -12,6 +12,8 @@ public class HealthItems : MonoBehaviour
 
     [SerializeField] private AudioClip pickupHealthItem;
     [SerializeField] private AudioClip useHealthItem;
+    public AudioSource pickupSource;
+    public AudioSource useHealthSource;
 
 
     // Start is called before the first frame update
@@ -31,8 +33,8 @@ public class HealthItems : MonoBehaviour
         if (medkits > 0)
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.clip = useHealthItem;
-            audio.Play();
+            useHealthSource.clip = useHealthItem;
+            useHealthSource.Play();
             removeMedkit();
             playerHealth.heal(50);
         }
@@ -40,9 +42,8 @@ public class HealthItems : MonoBehaviour
 
     public void addMedkit()
     {
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.clip = pickupHealthItem;
-        audio.Play();
+        pickupSource.clip = pickupHealthItem;
+        pickupSource.Play();
         medkits++;
     }
 

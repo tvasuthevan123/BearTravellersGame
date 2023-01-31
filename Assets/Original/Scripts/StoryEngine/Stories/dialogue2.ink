@@ -11,11 +11,11 @@ Me: who came from the darkness? #speaker:Player
 friend: not who, but what… don’t you remember the ENEMIES from Lost in the Woods, they're here #speaker:Friend
 Me: how did this happen? How have we ended up here, do you remember anything? #speaker:Player
 friend: no my memory is foggy, I only remember waking up in these woods and I've been searching since *cough* #speaker:Friend
-friend: could you hand me that medkit behind you? I could really use it right now #speaker:Friend
+friend: could you hand me that medkit you picked up? I could really use it right now #speaker:Friend
 -> END
 
 === medkitDialogue ===
-friend: Please can I use the medkit? I'm really low on health, feels like it anyway #speaker:Friend
+friend: Please can I have the medkit? I'm really low on health, feels like it anyway #speaker:Friend
     * [Give Medkit]
         ~ giveMedkit = true
         ~ friendship_meter += 15
@@ -31,7 +31,7 @@ friend: Please can I use the medkit? I'm really low on health, feels like it any
         ->darknessComing
 
 === getMedkitDialogue ===
-friend: The medkit, behind you, over that way - can you get it please? #speaker:Friend
+friend: The medkit, behind you, by the light - can you get it please? #speaker:Friend
 -> END
 
 === darknessComing ===

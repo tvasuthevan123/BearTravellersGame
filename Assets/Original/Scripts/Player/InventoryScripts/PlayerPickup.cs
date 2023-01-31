@@ -18,6 +18,7 @@ public class PlayerPickup : MonoBehaviour
     private bool path1choice = false;
 
     [SerializeField] private AudioClip pickupGun;
+    public AudioSource gunpickSource;
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.E)){
@@ -26,9 +27,8 @@ public class PlayerPickup : MonoBehaviour
                 Debug.Log("Hit: " + hit.transform.name);
                 if (hit.transform.CompareTag("gunpickup")) 
                 {
-                    AudioSource audio = GetComponent<AudioSource>();
-                    audio.clip = pickupGun;
-                    audio.Play();
+                    gunpickSource.clip = pickupGun;
+                    gunpickSource.Play();
                     gun.SetActive(true);
                     fence.SetActive(false);
                 }

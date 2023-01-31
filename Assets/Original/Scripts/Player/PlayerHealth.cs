@@ -13,6 +13,10 @@ public class PlayerHealth : MonoBehaviour
     public Image backHealthBar;
     [SerializeField] private Scenefader scenefader;
     [SerializeField] private TextAsset deathDialogue;
+    [SerializeField] private AudioClip damageSound;
+    public AudioSource damageSource;
+
+    public GameObject redScreen;
 
     void Start(){
         health = maxHealth;
@@ -21,6 +25,13 @@ public class PlayerHealth : MonoBehaviour
     void Update(){
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
+
+        if (redScreen.GetComponent<Image>().color.a > 0)
+        {
+            var color = redScreen.GetComponent<Image>().color;
+            color.a -= 0.01f;
+            redScreen.GetComponent<Image>().color = color;
+        }
     }
 
     void UpdateHealthUI(){
@@ -46,6 +57,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(float damage){
+
+        var color = redScreen.GetComponent<Image>().color;
+        color.a = 0.35f;
+        redScreen.GetComponent<Image>().color = color;
+        damageSource.clip = damageSound;
+        damageSource.Play();
+
         health -= damage;
         lerpTimer = 0f;
 

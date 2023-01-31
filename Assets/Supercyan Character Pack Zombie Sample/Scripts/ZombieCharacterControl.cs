@@ -73,6 +73,7 @@ public class ZombieCharacterControl : MonoBehaviour
     }
 
     void AttackPlayer(){
+        StopAllCoroutines();
         StartCoroutine(PlayAttackSound());
         if(playerInRange){
             playerHealth.TakeDamage(20f);
@@ -81,6 +82,7 @@ public class ZombieCharacterControl : MonoBehaviour
 
     IEnumerator PlayAttackSound(){
         AudioSource audio = GetComponent<AudioSource>();
+        audio.time = audio.clip.length * .35f;
         audio.clip = attackSound;
         audio.Play();
         yield return new WaitForSeconds(audio.clip.length);
