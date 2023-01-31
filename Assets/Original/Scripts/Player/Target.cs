@@ -15,13 +15,22 @@ public class Target : MonoBehaviour
 
     public void TakeDmg(float amount)
     {
-        health -= amount;
+        if (health <= 0f)
+        {
+            Debug.Log("zombie already dead");
+            return;
+        } else
+        {
+            health -= amount;
+        }
+ 
         if (health <= 0f)
         {
             Die();
             if (gameObject.CompareTag("zombiehard1"))
             {
                 StoryManager.instance.zombieGroupHardOneCounter--;
+                Debug.Log(StoryManager.instance.zombieGroupHardOneCounter);
                 if (StoryManager.instance.zombieGroupHardOneCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombiehard1"));
@@ -31,6 +40,7 @@ public class Target : MonoBehaviour
             if (gameObject.CompareTag("zombieeasy1"))
             {
                 StoryManager.instance.zombieGroupEasyOneCounter--;
+                Debug.Log(StoryManager.instance.zombieGroupEasyOneCounter);
                 if (StoryManager.instance.zombieGroupEasyOneCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombieeasy1"));
@@ -40,6 +50,7 @@ public class Target : MonoBehaviour
             if (gameObject.CompareTag("zombiefriend"))
             {
                 StoryManager.instance.zombieGroupFriendCounter--;
+                Debug.Log(StoryManager.instance.zombieGroupFriendCounter);
                 if (StoryManager.instance.zombieGroupFriendCounter <= 0)
                 {
                     Destroy(GameObject.FindWithTag("zombiefriend"));

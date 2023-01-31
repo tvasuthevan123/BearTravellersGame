@@ -11,7 +11,8 @@ public class MusicManager : MonoBehaviour
     public AudioClip endingMusic;
     public AudioClip tenseMusic;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
     private static MusicManager _instance;
 
     public static MusicManager Instance
@@ -35,7 +36,7 @@ public class MusicManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(this);
 
-            audioSource = gameObject.GetComponent<AudioSource>();
+            //audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.loop = true;
             audioSource.volume = 0.05f;
         }
@@ -58,11 +59,14 @@ public class MusicManager : MonoBehaviour
 
     public void PlaySpawnMusic()
     {
-        if (audioSource.clip != spawnMusic)
+        if (audioSource.clip != spawnMusic || audioSource2 != spawnMusic)
         {
-            audioSource.Stop();
-            audioSource.clip = spawnMusic;
-            audioSource.Play();
+            StopAllCoroutines();
+
+            StartCoroutine(FadeMusic(spawnMusic));
+            //audioSource.Stop();
+            //audioSource.clip = spawnMusic;
+            //audioSource.Play();
         }
     }
 
@@ -78,11 +82,53 @@ public class MusicManager : MonoBehaviour
 
     public void PlayTenseMusic()
     {
-        if (audioSource.clip != tenseMusic)
+        if (audioSource.clip != tenseMusic || audioSource2 != tenseMusic)
         {
-            audioSource.Stop();
-            audioSource.clip = tenseMusic;
-            audioSource.Play();
+            StopAllCoroutines();
+
+            StartCoroutine(FadeMusic(tenseMusic));
+            //audioSource.Stop();
+            //audioSource.clip = tenseMusic;
+            //audioSource.Play();
         }
+    }
+
+    private IEnumerator FadeMusic(AudioClip test)
+    {
+        float timeFade = 1f;
+        float timePassed = 0;
+
+
+        if (audioSource.isPlaying)
+        {
+            audioSource2.clip = test;
+            audioSource2.Play();
+
+            while (timePassed < timeFade)
+            {
+                audioSource2.volume = Mathf.Lerp(0, 0.05f, timePassed / timeFade);
+                audioSource.volume = Mathf.Lerp(0.05f, 0, timePassed / timeFade);
+                timePassed += Time.deltaTime;
+                yield return null;
+            }
+
+            audioSource.Stop();
+
+        } else
+        {
+            audioSource.clip = test;
+            audioSource.Play();
+
+            while (timePassed < timeFade)
+            {
+                audioSource.volume = Mathf.Lerp(0, 0.05f, timePassed / timeFade);
+                audioSource2.volume = Mathf.Lerp(0.05f, 0, timePassed / timeFade);
+                timePassed += Time.deltaTime;
+                yield return null;
+            }
+
+            audioSource2.Stop();
+        }
+        
     }
 }
