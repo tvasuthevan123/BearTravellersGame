@@ -24,8 +24,6 @@ public class QTE : MonoBehaviour
         if (waitingForKey)
         {
             waitingForKey = false;
-
-            //start coroutine
             displayMouse.enabled = true;
             timerFill.enabled = true;
             timeBackground.enabled = true;
@@ -70,7 +68,7 @@ public class QTE : MonoBehaviour
             remainingDuration += Time.deltaTime / duration;
             yield return null;
         }
-        //yield return new WaitForSeconds(3.5f);
+
         if (countingDown == true)
         {
             countingDown = false;
