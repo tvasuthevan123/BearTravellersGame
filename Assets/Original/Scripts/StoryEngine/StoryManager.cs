@@ -181,6 +181,9 @@ public class StoryManager : MonoBehaviour
                     break;
                 case AUDIO_TAG:
                     break;
+                case "MedkitUsage":
+                    player.gameObject.GetComponent<HealthItems>().medkitUsage(true);
+                    break;
                 default:
                     Debug.LogWarning("Unrecognised tag");
                     break;

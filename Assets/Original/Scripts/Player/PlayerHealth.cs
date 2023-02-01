@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using StarterAssets;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource damageSource;
 
     public GameObject redScreen;
+    public GameObject gun;
 
     void Start(){
         health = maxHealth;
@@ -83,8 +86,20 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public IEnumerator Die(){
+        // Disable movement, ammo use and health kit use
+        GetComponent<PlayerInput>().DeactivateInput();
+        GetComponent<HealthItems>().enabled = false;
+        GetComponent<PlayerPickup>().enabled = false;
+        if(gun != null && gun.activeSelf)
+            gun.GetComponent<Gun>().enabled = false;
+
+        // Enter death dialogue 
         StoryManager.instance.EnterDialogue(deathDialogue, null);
+        
+        //Give time for user to read death dialogue
         yield return new WaitForSeconds(1.5f);
+
+        //Reload game 
         scenefader.FadeTo("GameWorldRework");
     }
 

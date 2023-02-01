@@ -31,7 +31,10 @@ public class StoryVariables
         Debug.Log("Variable changed: " + name + " = " + value);
         if(variables.ContainsKey(name)){
             if(name == "giveMedkit" && (Ink.Runtime.BoolValue) value == true){
-                player.GetComponent<HealthItems>().removeMedkit();
+                player.GetComponent<HealthItems>().medkitUsage(false);
+            }
+            if(name == "useMedkit" && (Ink.Runtime.BoolValue) value == true){
+                player.GetComponent<HealthItems>().medkitUsage(true);
             }
             variables.Remove(name);
             variables.Add(name, value);
@@ -39,7 +42,9 @@ public class StoryVariables
     }
 
     void VariablesToStory(Story story){
+        Debug.Log("Variables to story");
         foreach(KeyValuePair<string, Ink.Runtime.Object> variable in variables){
+            Debug.Log("Variable: " + variable.Key + " " + variable.Value);
             story.variablesState.SetGlobal(variable.Key, variable.Value);
         }
     }

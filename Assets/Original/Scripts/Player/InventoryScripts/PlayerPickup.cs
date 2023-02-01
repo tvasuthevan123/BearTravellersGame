@@ -15,6 +15,7 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] private GameObject button1b; //right path
     [SerializeField] private GameObject rock1a; //left path
     [SerializeField] private GameObject rock1b; //right path
+    [SerializeField] private TextAsset dialogue4a, dialogue4b; //Dialogues for path choice
     private bool path1choice = false;
 
     [SerializeField] private AudioClip pickupGun;
@@ -35,6 +36,7 @@ public class PlayerPickup : MonoBehaviour
                 if (hit.transform.CompareTag("medkit"))
                 {
                     healthitems.addMedkit();
+                    StoryManager.instance.SetVariable("pickMedkit", true);
                     StoryManager.instance.SetVariable("hasMedkit", true);
                 }
                 if (hit.transform.CompareTag("ammo"))
@@ -45,12 +47,24 @@ public class PlayerPickup : MonoBehaviour
                 {
                     rock1a.SetActive(false); //TODO: ADD SOUND?
                     button1b.SetActive(false);
+
+                    // Change friendship meter + trigger dialogue
+                    int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
+                    StoryManager.instance.SetVariable("friendship_meter", friendshipMeter+10);
+                    StoryManager.instance.EnterDialogue(dialogue4a, null);
+                    
                     path1choice = true;
                 }
                 if (hit.transform.CompareTag("button1b") && path1choice == false)
                 {
                     rock1b.SetActive(false); //TODO: ADD SOUND?
                     button1a.SetActive(false); // opposite button removed
+                    
+                    // Change friendship meter + trigger dialogue
+                    int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
+                    StoryManager.instance.SetVariable("friendship_meter", friendshipMeter-10);
+                    StoryManager.instance.EnterDialogue(dialogue4b, null); 
+
                     path1choice = true;
                 }
                 Destroy(hit.transform.gameObject);
@@ -58,7 +72,7 @@ public class PlayerPickup : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.F))
         {
-            healthitems.medkitUsage();
+            healthitems.medkitUsage(true);
         }
     }
 }

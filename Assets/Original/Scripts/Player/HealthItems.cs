@@ -28,7 +28,7 @@ public class HealthItems : MonoBehaviour
         medkitDisplay.text = "Medkits: " + medkits.ToString();
     }
 
-    public void medkitUsage()
+    public void medkitUsage(bool heal)
     {
         if (medkits > 0)
         {
@@ -36,7 +36,8 @@ public class HealthItems : MonoBehaviour
             useHealthSource.clip = useHealthItem;
             useHealthSource.Play();
             removeMedkit();
-            playerHealth.heal(50);
+            if(heal)
+                playerHealth.heal(50);
         }
     }
 
@@ -50,5 +51,9 @@ public class HealthItems : MonoBehaviour
     public void removeMedkit()
     {
         medkits--;
+        if(medkits == 0 && !StoryManager.instance.isDialoguePlaying){
+            StoryManager.instance.SetVariable("hasMedkit", false);
+            Debug.Log("Set has medkit");
+        }
     }
 }
