@@ -30,6 +30,8 @@ public class HealthItems : MonoBehaviour
 
     public void medkitUsage(bool heal)
     {
+        if(playerHealth.health >= 100)
+            return;
         if (medkits > 0)
         {
             AudioSource audio = GetComponent<AudioSource>();

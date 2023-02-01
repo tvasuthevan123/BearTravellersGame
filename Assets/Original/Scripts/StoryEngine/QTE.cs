@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 
@@ -18,6 +19,8 @@ public class QTE : MonoBehaviour
     public float duration;
 
     private float remainingDuration = 0;
+    [SerializeField] private TextAsset passDialogue, failDialogue;
+    [SerializeField] private GameObject player, passAnim;
 
     private void Update()
     {
@@ -50,7 +53,9 @@ public class QTE : MonoBehaviour
             displayMouse.enabled = false;
             timerFill.enabled = false;
             timeBackground.enabled = false;
-            passBox.text = "pass";
+            passBox.text = "You shot him!!";
+            passAnim.SetActive(true);
+            StoryManager.instance.EnterDialogue(passDialogue, null);
             //TODO: Trigger bad friend conversation
             yield return new WaitForSeconds(1.5f);
             QTETrigger.qteComplete = true;
@@ -76,7 +81,8 @@ public class QTE : MonoBehaviour
             displayMouse.enabled = false;
             timerFill.enabled = false;
             timeBackground.enabled = false;
-            passBox.text = "fail";
+            passBox.text = "You didn't shoot him!!";
+            StoryManager.instance.EnterDialogue(failDialogue, null);
             //TODO: Trigger good friend conversation
             yield return new WaitForSeconds(1.5f);
             QTETrigger.qteComplete = true;
