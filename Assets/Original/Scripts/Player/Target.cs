@@ -8,6 +8,9 @@ public class Target : MonoBehaviour
 
     private MusicManager musicManager;
 
+    [SerializeField] private AudioClip hitmarker;
+    public AudioSource hitSource;
+
     private void Start()
     {
         musicManager = MusicManager.Instance;
@@ -15,6 +18,8 @@ public class Target : MonoBehaviour
 
     public void TakeDmg(float amount)
     {
+        hitSource.clip = hitmarker;
+        hitSource.Play();
         if (health <= 0f)
         {
             Debug.Log("zombie already dead");

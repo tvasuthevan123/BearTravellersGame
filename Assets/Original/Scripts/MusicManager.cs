@@ -72,11 +72,11 @@ public class MusicManager : MonoBehaviour
 
     public void PlayEndingnMusic()
     {
-        if (audioSource.clip != endingMusic)
+        if (audioSource.clip != endingMusic || audioSource2 != endingMusic)
         {
-            audioSource.Stop();
-            audioSource.clip = endingMusic;
-            audioSource.Play();
+            StopAllCoroutines();
+
+            StartCoroutine(FadeMusic(endingMusic));
         }
     }
 

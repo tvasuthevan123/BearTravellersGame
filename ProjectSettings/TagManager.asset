@@ -20,6 +20,7 @@ TagManager:
   - friendchoiceneg
   - friendchoicepos
   - bush
+  - ending
   layers:
   - Default
   - TransparentFX

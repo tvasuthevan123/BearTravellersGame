@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Gun : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class Gun : MonoBehaviour
     public new Camera camera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public Image hitmarker;
 
     public Ammo gunAmmo;
 
@@ -33,6 +37,8 @@ public class Gun : MonoBehaviour
 
             if(target != null){
                 target.TakeDmg(dmg);
+                StopAllCoroutines();
+                StartCoroutine(showHit());
             }
 
             if(hit.rigidbody != null){
@@ -45,5 +51,10 @@ public class Gun : MonoBehaviour
         }
     }
 
-
+    IEnumerator showHit()
+    {
+        hitmarker.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        hitmarker.enabled = false;
+    }
 }

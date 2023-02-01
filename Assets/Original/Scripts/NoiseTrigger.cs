@@ -6,7 +6,13 @@ public class NoiseTrigger : MonoBehaviour
 {
     [SerializeField] private AudioClip bushNoise;
     [SerializeField] private AudioClip leaveNoise;
+    private MusicManager musicManager;
     public GameObject noiseLocation;
+
+    private void Start()
+    {
+        musicManager = MusicManager.Instance;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,11 +22,13 @@ public class NoiseTrigger : MonoBehaviour
             if (this.gameObject.tag == "bush")
             {
                 AudioSource.PlayClipAtPoint(bushNoise, noiseLocation.transform.position);
+                this.GetComponent<Collider>().enabled = false;
 
-            } else
+            } 
+            if (this.gameObject.tag == "ending")
             {
-                audio.clip = leaveNoise;
-                audio.Play();
+                musicManager.PlayEndingnMusic();
+                this.GetComponent<Collider>().enabled = false;
             }
         }
     }
