@@ -27,6 +27,7 @@ public class QTE : MonoBehaviour
         if (waitingForKey)
         {
             waitingForKey = false;
+            passBox.text = "Voice: Do it, shoot him now!";
             displayMouse.enabled = true;
             timerFill.enabled = true;
             timeBackground.enabled = true;
@@ -53,13 +54,12 @@ public class QTE : MonoBehaviour
             displayMouse.enabled = false;
             timerFill.enabled = false;
             timeBackground.enabled = false;
-            passBox.text = "You shot him!!";
+            passBox.text = "Voice: Good job";
             passAnim.SetActive(true);
             StoryManager.instance.EnterDialogue(passDialogue, null);
             //TODO: Trigger bad friend conversation
             yield return new WaitForSeconds(1.5f);
             QTETrigger.qteComplete = true;
-            Debug.Log("HERE");
             correctKey = 0;
             passBox.text = "";
         }
@@ -81,7 +81,7 @@ public class QTE : MonoBehaviour
             displayMouse.enabled = false;
             timerFill.enabled = false;
             timeBackground.enabled = false;
-            passBox.text = "You didn't shoot him!!";
+            passBox.text = "Voice: You didn't listen!";
             StoryManager.instance.EnterDialogue(failDialogue, null);
             //TODO: Trigger good friend conversation
             yield return new WaitForSeconds(1.5f);
