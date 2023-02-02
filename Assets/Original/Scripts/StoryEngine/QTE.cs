@@ -16,6 +16,9 @@ public class QTE : MonoBehaviour
     public int correctKey; //TODO: believe this can be removed
     public bool countingDown = false;
 
+    [SerializeField] private AudioClip friendHurt;
+    public AudioSource friendSource;
+
     public float duration;
 
     private float remainingDuration = 0;
@@ -40,6 +43,8 @@ public class QTE : MonoBehaviour
             {
                 qteActive = false;
                 correctKey = 1;
+                friendSource.clip = friendHurt;
+                friendSource.Play();
                 StartCoroutine(KeyPressing());
             }
         }
