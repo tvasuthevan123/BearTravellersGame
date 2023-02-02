@@ -38,7 +38,7 @@ public class MusicManager : MonoBehaviour
 
             //audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.loop = true;
-            audioSource.volume = 0.05f;
+            //audioSource.volume = 0.05f;
         }
         else
         {
@@ -51,9 +51,9 @@ public class MusicManager : MonoBehaviour
     {
         if (audioSource.clip != mainmenuMusic)
         {
-            audioSource.Stop();
-            audioSource.clip = mainmenuMusic;
-            audioSource.Play();
+            StopAllCoroutines();
+
+            StartCoroutine(FadeMusic(mainmenuMusic));
         }
     }
 
@@ -64,9 +64,6 @@ public class MusicManager : MonoBehaviour
             StopAllCoroutines();
 
             StartCoroutine(FadeMusic(spawnMusic));
-            //audioSource.Stop();
-            //audioSource.clip = spawnMusic;
-            //audioSource.Play();
         }
     }
 
@@ -87,9 +84,6 @@ public class MusicManager : MonoBehaviour
             StopAllCoroutines();
 
             StartCoroutine(FadeMusic(tenseMusic));
-            //audioSource.Stop();
-            //audioSource.clip = tenseMusic;
-            //audioSource.Play();
         }
     }
 

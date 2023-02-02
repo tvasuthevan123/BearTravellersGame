@@ -2,11 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public Scenefader scenefader;
     public AudioMixer mixer;
+
+    private MusicManager musicManager;
+
+    public Slider masterSlider, musicSlider, sfxSlider;
+
+
+    private void Awake()
+    {
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
+        musicManager = MusicManager.Instance;
+        musicManager.PlayMenuMusic();
+    }
     public void PlayGame(){
         scenefader.FadeTo("GameWorldRework");
     }
