@@ -92,7 +92,7 @@ public class StoryManager : MonoBehaviour
         if (!isDialoguePlaying && !isAuto && !isNoteOpen)
             return;
 
-        if (currentStorySegment!=null && currentStorySegment.currentChoices.Count == 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))
+        if (currentStorySegment!=null && currentStorySegment.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.Space))
         {
             ContinueStorySegment(isAuto);
         }
@@ -160,13 +160,13 @@ public class StoryManager : MonoBehaviour
                 case SPEAKER_TAG:
                     switch(value){
                         case "Friend":
-                            storyText.color = Color.green;
+                            storyText.color = Color.black;
                             break;
                         case "Player":
                             storyText.color = Color.white;
                             break;
                         case "Darkness":
-                            storyText.color = new Color(125/255f, 2/255f, 232/255f);
+                            storyText.color = Color.red;
                             break;
                         default:
                             storyText.color = Color.black;

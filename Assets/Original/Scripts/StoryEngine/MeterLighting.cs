@@ -21,8 +21,8 @@ public class MeterLighting : MonoBehaviour
     };
 
     static readonly Color[] worstColors = new Color[3] {
-        new Color(90/255f, 7/255f, 13/255f),
-        new Color(142/255f, 108/255f, 2/255f),
+        Color.magenta,
+        Color.red,
         new Color(48/255f, 48/255f, 48/255f)
     };
 
@@ -63,10 +63,10 @@ public class MeterLighting : MonoBehaviour
     {
         int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
         if(friendshipMeter >= 0){
-            setGradientBetweenKeys(neutralColors, bestColors, (float)friendshipMeter/25);
+            setGradientBetweenKeys(neutralColors, bestColors, (float)friendshipMeter/15);
         }
         else if(friendshipMeter < 0){
-            setGradientBetweenKeys(neutralColors, worstColors, (float)friendshipMeter/-25);
+            setGradientBetweenKeys(neutralColors, worstColors, (float)friendshipMeter/-15);
         }
         gradient.SetKeys(colorKey, alphaKey);
         var col = fire.colorOverLifetime;

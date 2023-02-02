@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-~ friendship_meter -= 15
+~ friendship_meter -= 10
 friend: ouch… what the hell man, why'd you shoot me
 player: I…. I didn't mean to, it was an accident
 friend: what do you mean it was an accident you just shot me man

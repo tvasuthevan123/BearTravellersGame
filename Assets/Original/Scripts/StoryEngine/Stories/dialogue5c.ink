@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-~ friendship_meter += 15
+~ friendship_meter += 10
 player: What the hell
 friend: What's wrong?
 player: There's some kind of voice, it was trying to convince me to shoot you.
