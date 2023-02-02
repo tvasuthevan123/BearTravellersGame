@@ -1,11 +1,11 @@
 INCLUDE globals.ink
 
 ~ friendship_meter -= 10
-friend: ouch… what the hell man, why'd you shoot me
-player: I…. I didn't mean to, it was an accident
-friend: what do you mean it was an accident you just shot me man
-player: its these controls, its like I forgot how to control myself for a second
-player: I'm really sorry
-voice: haha you actually did it, I guess I'll let you have some bullets...
-friend: I don't believe you...
-player: let's just keep moving we must be close now
+friend: ouch… what the hell man, why'd you shoot me #speaker:Friend
+player: I…. I didn't mean to, it was an accident #speaker:Player
+friend: what do you mean it was an accident you just shot me man #speaker:Friend		
+player: its these controls, its like I forgot how to control myself for a second #speaker:Player
+player: I'm really sorry #speaker:Player
+voice: haha you actually did it, I guess I'll let you have some bullets... #speaker:Darkness
+friend: I don't believe you... #speaker:Friend
+player: let's just keep moving we must be close now #speaker:Player
