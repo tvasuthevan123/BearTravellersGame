@@ -17,7 +17,7 @@ public class QTE : MonoBehaviour
     public bool countingDown = false;
 
     [SerializeField] private AudioClip friendHurt;
-    public AudioSource friendSource;
+    public GameObject friendLocation;
 
     public float duration;
 
@@ -43,8 +43,7 @@ public class QTE : MonoBehaviour
             {
                 qteActive = false;
                 correctKey = 1;
-                friendSource.clip = friendHurt;
-                friendSource.Play();
+                AudioSource.PlayClipAtPoint(friendHurt, friendLocation.transform.position);
                 StartCoroutine(KeyPressing());
             }
         }
