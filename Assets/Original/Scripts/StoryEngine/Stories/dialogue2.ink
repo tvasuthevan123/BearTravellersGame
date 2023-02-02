@@ -68,5 +68,5 @@ Me: do you remember what the game was about?
 Friend: no, we only just started playing it… I remember finding it on a random game forum #cutscene:darknessApproaches1
 Friend: the darkness, it's moving towards us… it's closing in on us					
 Friend: I think we need to continue forward and try and find a way out
-Me: okay good idea… #cutscene:0 #disable:true
+Me: okay good idea… #Cutscene:7/false #disable:true
 ->END

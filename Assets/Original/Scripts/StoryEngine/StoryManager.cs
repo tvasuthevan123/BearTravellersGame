@@ -186,7 +186,7 @@ public class StoryManager : MonoBehaviour
                     player.gameObject.GetComponent<HealthItems>().medkitUsage(true);
                     break;
                 default:
-                    Debug.LogWarning("Unrecognised tag");
+                    Debug.LogWarning("Unrecognised tag " + tag);
                     break;
             }
         }
