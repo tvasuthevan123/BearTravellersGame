@@ -16,8 +16,11 @@ public class Darkness : MonoBehaviour
         followPlayer();
     }
     void OnTriggerEnter(Collider collider){
+        Debug.Log("Trigger");
         if (collider.gameObject.GetComponent<Target>() != null)
             collider.gameObject.GetComponent<Target>().TakeDmg(damage);
+        if (collider.gameObject.GetComponent<PlayerHealth>() != null)
+            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(100f);
     }
 
     void followPlayer(){
