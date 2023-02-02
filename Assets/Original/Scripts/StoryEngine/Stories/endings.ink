@@ -23,8 +23,7 @@ Friend: I'm here, I'm here - the zombies hit hard... I'm not sure if I'm gonna m
 Me: I got you, I wouldn't leave you behind
 Friend: This is what you deserve, I must make it out of here
 #Cutscene:3/true
-Me: Nooooo.....
-->END
+Me: Nooooo..... ->END
 
 === goodSave ===
 Me: I got you buddy, I'm not leaving you behind
@@ -42,5 +41,5 @@ Friend: You've done nothing but betray me since we got here, you deserve this #C
 === goodLeave ===
 Me: I'm sorry, it's too close, I don't have time...
 Friend: That's okay, at least one of us is gonna make it out of this hell hole
-Me: I'll try and find a way to get you back... #Cutscene:1/true
-->END
+#Cutscene:1/true 
+Me: I'll try and find a way to get you back... ->END 
