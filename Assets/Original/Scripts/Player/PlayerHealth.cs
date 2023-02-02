@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using StarterAssets;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject redScreen;
     public GameObject gun;
+
+    public TextMeshProUGUI deathMsg;
 
     void Start(){
         health = maxHealth;
@@ -93,11 +96,13 @@ public class PlayerHealth : MonoBehaviour
         if(gun != null && gun.activeSelf)
             gun.GetComponent<Gun>().enabled = false;
 
+        deathMsg.gameObject.SetActive(true);
+
         // Enter death dialogue 
         StoryManager.instance.EnterDialogue(deathDialogue, null);
         
         //Give time for user to read death dialogue
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
 
         //Reload game 
         scenefader.FadeTo("GameWorldRework");

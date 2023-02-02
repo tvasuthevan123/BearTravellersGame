@@ -18,6 +18,8 @@ public class Gun : MonoBehaviour
 
     [SerializeField] private AudioClip gunShot;
     public AudioSource gunSource;
+    [SerializeField] private AudioClip hitmarkerSound;
+    public AudioSource hitSource;
 
     void Update() {
         if(!StoryManager.instance.isDialoguePlaying && !StoryManager.instance.isNoteOpen && Input.GetButtonDown("Fire1")){
@@ -37,6 +39,8 @@ public class Gun : MonoBehaviour
 
             if(target != null){
                 target.TakeDmg(dmg);
+                hitSource.clip = hitmarkerSound;
+                hitSource.Play();
                 StopAllCoroutines();
                 StartCoroutine(showHit());
             }

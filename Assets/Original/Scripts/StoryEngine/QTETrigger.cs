@@ -14,6 +14,11 @@ public class QTETrigger : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] private GameObject fence1, fence2, fence3, dialogue;
 
+    private void Start()
+    {
+        qteComplete = false;
+    }
+
     void OnTriggerEnter()
     {
         player.GetComponent<FirstPersonController>().disableInput = true;
@@ -40,10 +45,10 @@ public class QTETrigger : MonoBehaviour
             player.GetComponent<HealthItems>().enabled = true;
             player.GetComponent<PlayerPickup>().enabled = true;
             qteObject.SetActive(false);
-            fence1.gameObject.SetActive(false);
-            fence2.gameObject.SetActive(false);
-            fence3.gameObject.SetActive(false);
-            dialogue.gameObject.SetActive(false);
+            fence1.SetActive(false);
+            fence2.SetActive(false);
+            fence3.SetActive(false);
+            dialogue.SetActive(false);
         }
     }
 }
