@@ -11,6 +11,7 @@ public class QTETrigger : MonoBehaviour
     [SerializeField] private Vector3 dialogueLook, dialoguePosition;
     [SerializeField] Transform playerCamera;
     [SerializeField] GameObject player;
+    [SerializeField] private GameObject fence1, fence2, fence3;
 
     void OnTriggerEnter()
     {
@@ -36,6 +37,9 @@ public class QTETrigger : MonoBehaviour
             player.GetComponent<HealthItems>().enabled = true;
             player.GetComponent<PlayerPickup>().enabled = true;
             qteObject.SetActive(false);
+            fence1.gameObject.SetActive(false);
+            fence2.gameObject.SetActive(false);
+            fence3.gameObject.SetActive(false);
         }
     }
 }
