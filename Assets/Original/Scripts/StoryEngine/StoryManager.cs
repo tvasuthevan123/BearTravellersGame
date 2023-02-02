@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
 
@@ -46,6 +45,7 @@ public class StoryManager : MonoBehaviour
     private GameObject trigger;
     private MusicManager musicManager;
 
+    [Header("Entity Spawn Control")]
     public GameObject zombieGroupHardOne;
     public int zombieGroupHardOneCounter = 6;
 
@@ -294,6 +294,7 @@ public class StoryManager : MonoBehaviour
     public void EnterNote(string noteText){
         Debug.Log("Note opened");
         isNoteOpen = true;
+        notePanel.SetActive(true);
         notePanel.GetComponent<Animator>().SetBool("isNoteOpen", true);
         this.noteText.text = noteText; 
     }
@@ -301,6 +302,7 @@ public class StoryManager : MonoBehaviour
     public void ExitNote(){
         Debug.Log("Note closed");
         isNoteOpen = false;
-        notePanel.GetComponent<Animator>().SetBool("isNoteOpen", false);
+        notePanel.GetComponent<Animator>().SetBool("isNoteOpen", true);
+        notePanel.SetActive(false);
     }
 }

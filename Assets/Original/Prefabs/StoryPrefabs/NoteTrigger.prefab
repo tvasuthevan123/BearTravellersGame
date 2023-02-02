@@ -65,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 5675190661575174480}
   OpenedIndicatorMat: {fileID: 2100000, guid: fe5c0963905a9af4b826135a725b19ce, type: 2}
-  nearbyCollider: {fileID: 7868667343195314658}
   noteText: Feels like I've been here for days
   lightColors:
   - {fileID: 2100000, guid: e8b4c80be740f184989f6e048629b7ce, type: 2}
@@ -79,7 +78,7 @@ AudioSource:
   m_GameObject: {fileID: 5363870105238240200}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3507212095504205653, guid: 17fac85bb70826e479d0d5bf9baf89b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: e70f07edc4c913c40bf6722d8705de29, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

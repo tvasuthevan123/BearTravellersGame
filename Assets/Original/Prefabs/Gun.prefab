@@ -105,8 +105,10 @@ MonoBehaviour:
   camera: {fileID: 0}
   muzzleFlash: {fileID: 7178052741758223195}
   impactEffect: {fileID: 8681328050055320819, guid: 86d1bb6cc6495b641a82eaa2fc30b304, type: 3}
+  hitmarker: {fileID: 0}
   gunAmmo: {fileID: 0}
   gunShot: {fileID: 8300000, guid: 11dc71363b3e0f244915722d958fd84d, type: 3}
+  gunSource: {fileID: 0}
 --- !u!95 &6009097438258627372
 Animator:
   serializedVersion: 4
@@ -136,7 +138,7 @@ AudioSource:
   m_GameObject: {fileID: 6009097438265929964}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3507212095504205653, guid: 17fac85bb70826e479d0d5bf9baf89b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 11dc71363b3e0f244915722d958fd84d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.211
