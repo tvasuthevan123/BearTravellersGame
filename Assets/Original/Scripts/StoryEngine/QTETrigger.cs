@@ -11,7 +11,7 @@ public class QTETrigger : MonoBehaviour
     [SerializeField] private Vector3 dialogueLook, dialoguePosition;
     [SerializeField] Transform playerCamera;
     [SerializeField] GameObject player;
-    [SerializeField] private GameObject fence1, fence2, fence3;
+    [SerializeField] private GameObject fence1, fence2, fence3, dialogue;
 
     void OnTriggerEnter()
     {
@@ -40,6 +40,7 @@ public class QTETrigger : MonoBehaviour
             fence1.gameObject.SetActive(false);
             fence2.gameObject.SetActive(false);
             fence3.gameObject.SetActive(false);
+            dialogue.gameObject.SetActive(false);
         }
     }
 }
