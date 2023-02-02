@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isGamePaused = false;
     public GameObject pauseMenuUI;
-    public GameObject player, playerUI, narrativeUI;
+    public GameObject player, gun, playerUI, narrativeUI;
     public Slider masterSlider, musicSlider, sfxSlider;
 
     public Scenefader sceneFader;
@@ -41,6 +41,8 @@ public class PauseMenu : MonoBehaviour
         player.GetComponent<PlayerInput>().DeactivateInput();
         player.GetComponent<HealthItems>().enabled = false;
         player.GetComponent<PlayerPickup>().enabled = false;
+        if(gun.activeSelf)
+            gun.GetComponent<Gun>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
@@ -57,7 +59,10 @@ public class PauseMenu : MonoBehaviour
         player.GetComponent<PlayerInput>().ActivateInput();
         player.GetComponent<HealthItems>().enabled = true;
         player.GetComponent<PlayerPickup>().enabled = true;
+        if(gun.activeSelf)
+            gun.GetComponent<Gun>().enabled = false;
         
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
