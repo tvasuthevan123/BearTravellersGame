@@ -49,8 +49,6 @@ public class PlayerPickup : MonoBehaviour
                     button1b.SetActive(false);
 
                     // Change friendship meter + trigger dialogue
-                    int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
-                    StoryManager.instance.SetVariable("friendship_meter", friendshipMeter+10);
                     StoryManager.instance.EnterDialogue(dialogue4a, null);
                     
                     path1choice = true;
@@ -61,8 +59,6 @@ public class PlayerPickup : MonoBehaviour
                     button1a.SetActive(false); // opposite button removed
                     
                     // Change friendship meter + trigger dialogue
-                    int friendshipMeter = ((Ink.Runtime.IntValue) StoryManager.instance.GetVariableState("friendship_meter")).value;
-                    StoryManager.instance.SetVariable("friendship_meter", friendshipMeter-10);
                     StoryManager.instance.EnterDialogue(dialogue4b, null); 
 
                     path1choice = true;
