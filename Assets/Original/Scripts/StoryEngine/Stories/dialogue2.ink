@@ -57,16 +57,15 @@ Me: ... #speaker:Player
 ->darknessComing
 
 === getMedkitDialogue ===
-friend: could you hand me that medkit you picked up? I could really use it right now #speaker:Friend
 friend: The medkit, behind you, by the light - can you get it please? #speaker:Friend
 -> END
 
 === darknessComing ===
-Me: something weird is going on, I can't seem to get over this fence, it's like theres a force stopping me									
-Friend: yeah I've noticed it too, it's like we're really the characters from Lost in the Woods.
-Me: do you remember what the game was about?
-Friend: no, we only just started playing it… I remember finding it on a random game forum #cutscene:darknessApproaches1
-Friend: the darkness, it's moving towards us… it's closing in on us					
-Friend: I think we need to continue forward and try and find a way out
-Me: okay good idea… #Cutscene:7/false #disable:true
+Me: something weird is going on, I can't seem to get over this fence, it's like theres a force stopping me	#speaker:Player								
+Friend: yeah I've noticed it too, it's like we're really the characters from Lost in the Woods. #speaker:Friend
+Me: do you remember what the game was about? #speaker:Player
+Friend: no, we only just started playing it… I remember finding it on a random game forum #speaker:Friend
+Friend: the darkness, it's moving towards us… it's closing in on us #speaker:Friend		
+Friend: I think we need to continue forward and try and find a way out #speaker:Friend
+Me: okay good idea… #speaker:Player #Cutscene:7/false #disable:true
 ->END
