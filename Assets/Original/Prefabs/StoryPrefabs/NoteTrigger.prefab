@@ -65,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 5675190661575174480}
   OpenedIndicatorMat: {fileID: 2100000, guid: fe5c0963905a9af4b826135a725b19ce, type: 2}
+  nearbyIndicator: {fileID: 5702702832509848485}
   noteText: Feels like I've been here for days
   lightColors:
   - {fileID: 2100000, guid: e8b4c80be740f184989f6e048629b7ce, type: 2}
