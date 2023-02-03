@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-Friend: I'm here, I'm here - the zombies hit hard... I'm not sure if I'm gonna make it...
+Friend: I'm here, I'm here - the zombies hit hard... I'm not sure if I'm gonna make it... #speaker:Friend
 { friendship_meter >= 0 : -> goodChoices | -> badChoices }
 #end:true
 
