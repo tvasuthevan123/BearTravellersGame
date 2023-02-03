@@ -18,7 +18,7 @@ INCLUDE globals.ink
 
 === first ===
 ~ firstTime = false
-Me: Jim are you okay? You look awful #speaker:Player
+Me: friend are you okay? You look awful #speaker:Player
 friend: no I'm not, they nearly got me back there, they came from the darkness #speaker:Friend
 Me: who came from the darkness? #speaker:Player
 friend: not who, but what… don’t you remember the ENEMIES from Lost in the Woods, they're here #speaker:Friend
