@@ -22,8 +22,7 @@ Friend: I'm here, I'm here - the zombies hit hard... I'm not sure if I'm gonna m
 === badSave ===
 Me: I got you, I wouldn't leave you behind #speaker:Player
 Friend: This is what you deserve, I must make it out of here #speaker:Friend
-#Cutscene:3/true
-Me: Nooooo.....  #speaker:Player 
+Me: Nooooo..... #Cutscene:3/true #speaker:Player 
 ->END
 
 === goodSave ===
@@ -41,6 +40,6 @@ Friend: You've done nothing but betray me since we got here, you deserve this  #
 
 === goodLeave ===
 Me: I'm sorry, it's too close, I don't have time... #speaker:Player
-Friend: That's okay, at least one of us is gonna make it out of this hell hole #speaker:Friend #Cutscene:1/true 
-Me: I'll try and find a way to get you back...  #speaker:Player 
+Friend: That's okay, at least one of us is gonna make it out of this hell hole #speaker:Friend
+Me: I'll try and find a way to get you back... #Cutscene:1/true #speaker:Player 
 ->END
