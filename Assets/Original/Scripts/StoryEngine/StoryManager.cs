@@ -166,7 +166,7 @@ public class StoryManager : MonoBehaviour
                             storyText.color = Color.white;
                             break;
                         case "Darkness":
-                            storyText.color = Color.red;
+                            storyText.color = Color.magenta;
                             break;
                         default:
                             storyText.color = Color.black;
