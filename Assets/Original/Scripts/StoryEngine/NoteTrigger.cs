@@ -8,6 +8,7 @@ public class NoteTrigger : MonoBehaviour
     [Header("Visual Cues")]
     [SerializeField] private GameObject visualCue;
     [SerializeField] private Material OpenedIndicatorMat;
+    [SerializeField] private GameObject nearbyIndicator;
 
     [Header("Note Text")]
     [TextArea]
@@ -90,6 +91,7 @@ public class NoteTrigger : MonoBehaviour
         hasOpened = true;
         StopCoroutine("FlickerLoop");
         SetLightColour(OpenedIndicatorMat);
+        nearbyIndicator.SetActive(false);
     }
 
     private void SetLightColour(Material lightMat){
