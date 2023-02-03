@@ -24,10 +24,13 @@ public class NoiseTrigger : MonoBehaviour
                 AudioSource.PlayClipAtPoint(bushNoise, noiseLocation.transform.position);
                 this.GetComponent<Collider>().enabled = false;
 
-            } 
-            if (this.gameObject.tag == "ending")
+            } else if (this.gameObject.tag == "ending")
             {
                 musicManager.PlayEndingnMusic();
+                this.GetComponent<Collider>().enabled = false;
+            } else
+            {
+                AudioSource.PlayClipAtPoint(leaveNoise, noiseLocation.transform.position);
                 this.GetComponent<Collider>().enabled = false;
             }
         }
