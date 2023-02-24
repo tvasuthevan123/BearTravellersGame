@@ -1,6 +1,6 @@
 # Lost In The Game
 
-Hello! This is a 10 min demo story game that follows the fable of the Bear and The 2 Travellers, produced by [myself](https://github.com/tvasuthevan123) and [@Davey-Dean](https://github.com/Davey-Dean).
+Hello! This is a 10 min demo story game inspired by the fable of the Bear and The 2 Travellers, produced by [myself](https://github.com/tvasuthevan123) and [@Davey-Dean](https://github.com/Davey-Dean).
 
 This work was produced as part of coursework for the University of Southampton COMP3218 - Game Development module. 
 
